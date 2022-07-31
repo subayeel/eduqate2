@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./Components/styles/Global";
+import Navbar from "./Components/Navbar/Navbar";
+import HeroPage from "./Components/Heropage/HeroPage";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import  ScholarCard  from "./Components/OnlineContentPage/ScholarCard";
+
 
 function App() {
+  const theme = {
+    colors: {
+      primarybg: "#ECEFFF",
+      secondarybg: "#FCFFDF",
+      primaryColor: "#3F9DA7",
+      brownBtnColor: "#835A3A",
+    },
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Navbar />
+        <HeroPage />
+        <ScholarCard/>
+        
+      </Router>
+    </ThemeProvider>
   );
 }
-
 export default App;
