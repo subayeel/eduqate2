@@ -18,11 +18,11 @@ export const Heading1 = styled.h1`
   font-family: Arial, Helvetica, sans-serif;
 `;
 
-export const Heading3 = styled.p`
-margin: 0 0 0 60px;
+export const Heading3 = styled.div`
 
+  
   font-size: 1.2em;
-  align-items: flex-end;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 `
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./Components/styles/Global";
+import GlobalStyle from "./Components/Global";
 import Navbar from "./Components/Navbar/Navbar";
 import HeroPage from "./Components/Heropage/HeroPage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import  ScholarCard  from "./Components/OnlineContentPage/ScholarCard";
+import  ScholarPage  from "./Components/ScholarPage/ScholarPage";
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <Router>
         <Navbar />
         <HeroPage />
-        <ScholarCard/>
+        <ScholarPage/>
         
       </Router>
     </ThemeProvider>

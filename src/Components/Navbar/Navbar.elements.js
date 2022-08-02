@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Container } from "../styles/Global";
+import { Container } from "../Global";
 import {FaSearch} from "react-icons/fa"
 
 export const Nav = styled.div`
