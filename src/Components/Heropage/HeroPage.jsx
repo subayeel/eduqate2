@@ -10,20 +10,14 @@ import {
   ImageContainer,
 } from "../Global";
 
-import {
-  Heading1,
-  Heading3,
-  HeroDesc,
-  HeroContainer,
-} from "./Heropage.elements";
 
 function HeroPage() {
   return (
     <Section height="88vh" gradient>
       <FlexContainer>
         <FlexItem flex="35%">
-          <HeroContainer direction="column" align="center">
-            <ImageContainer width="80%">
+          <FlexContainer direction="column" align="center">
+            <ImageContainer width="60%">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/heroImage.png?alt=media&token=a5889f26-0c42-464d-bd32-801883472af9"
                 alt=""
@@ -31,11 +25,16 @@ function HeroPage() {
             </ImageContainer>
 
             <SearchBar />
-          </HeroContainer>
+          </FlexContainer>
           <FlexContainer direction="column" align="flex-start">
-            <Heading1>
+            <TextStyle
+              margin="10px 0 10px 60px"
+              align="start"
+              size="1.4em"
+              weight="600"
+            >
               Why <Color color="#835A3A">Islam?</Color>
-            </Heading1>
+            </TextStyle>
             <TextStyle
               size="1.0em"
               weight="400"
@@ -52,9 +51,9 @@ function HeroPage() {
             align="center"
             direction="row"
             bottom="10px"
-            left="100px"
+            left="25%"
           >
-            <Button margin="5px 60px 5px 10px">Learn More</Button>
+            <Button>Learn More</Button>
           </FlexContainer>
         </FlexItem>
         <FlexItem flex="65%">
@@ -102,9 +101,16 @@ function HeroPage() {
             “Whoever is kind, God will be kind to him; therefore be kind to man
             on earth. He Who is in heaven will then show mercy to you”
           </TextStyle>
-
-          <Button primary>Learn Quran</Button>
-          <Button margin="5px 60px 10px 5px">Learn Hadeeth</Button>
+          <FlexContainer
+            position="absolute"
+            align="center"
+            direction="row"
+            bottom="10px"
+            right="0"
+          >
+            <Button primary margin="0 10px 0 0">Learn Quran</Button>
+            <Button margin="0 60px 0 0">Learn Hadeeth</Button>
+          </FlexContainer>
         </FlexItem>
       </FlexContainer>
     </Section>

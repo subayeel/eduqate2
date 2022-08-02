@@ -1,6 +1,4 @@
 import React from "react";
-
-import {} from "../styles/Containers.styled";
 import {
   TextStyle,
   FlexContainer,
@@ -13,7 +11,7 @@ import { YoutubeIcon, WebIcon } from "./ScholarCard.elements";
 function ScholarCard(props) {
   return (
     <div>
-      <FlexContainer justify="center" align="center" direction="column">
+      <FlexContainer margin="0 0 10px 0" justify="center" align="center" direction="column">
         <FlexItem flex="40%">
           <ImageContainer width="350px">
             <img src={process.env.PUBLIC_URL + "images/scholar1.png"} />

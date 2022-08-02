@@ -5,9 +5,9 @@ import {FaSearch} from "react-icons/fa"
 
 export const Nav = styled.div`
 background: #FCFFDF;
-height: 80px;
+height: 12vh;
 width: 100vw;
-position: sticky;
+
 display: flex;
 justify-content: center;
 top: 0;
@@ -77,20 +77,4 @@ justify-self: center;
 align-items: center;
 ${FaSearch}
 
-`
-export const Avatar = styled.div`
-
-justify-self: end;
-display: inline;
-align-items: center;
-height: 60px;
-width: 60px;
-background-color:#835A3A ;
-border: 2px solid #3C7C90;
-border-radius: 100%;
-img{
-    height:100%;
-    width:100%;
-    border-radius: 100%;
-}
 `

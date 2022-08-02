@@ -7,24 +7,7 @@ export const HeroContainer = styled.div`
   justify-content: ${props=>props.justify};
 `;
 
-export const HeroDesc = styled.p`
-  margin: 0 60px 0 60px;
-`;
 
-export const Heading1 = styled.h1`
-  margin-left: 60px;
-  font-size: 1.5em;
-  font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
-`;
-
-export const Heading3 = styled.div`
-
-  
-  font-size: 1.2em;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-`
 
 export const Input = styled.input.attrs({
     type: "text",

@@ -6,10 +6,12 @@ import {
   NavIcon,
   Item,
   NavItems,
-  Avatar,
+  
   SearchIcon,
   NavSearch,
 } from "./Navbar.elements";
+
+import {Avatar} from "../Global";
 
 function Navbar() {
   return (
@@ -34,7 +36,7 @@ function Navbar() {
           
         
 
-        <Avatar>
+        <Avatar radius="60px">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/subayeel-pic.jpeg?alt=media&token=e0cffe5d-d3bd-4870-b1ce-dbec0026c779"
             alt=""

@@ -53,6 +53,20 @@ position: ${(props)=>props.position};
   flex: ${(props) => props.flex};
 `;
 
+export const GridContainer = styled.div`
+  display: grid;
+  position: relative;
+`;
+
+export const GridItem = styled.div`
+  grid-column-start: ${(props) => props.colstart};
+  grid-column-end: ${(props) => props.colend};
+  grid-row-start: ${(props) => props.rowstart};
+  grid-row-end: ${(props) => props.rowend};
+  background-color: ${(props) =>
+    props.bgcolor ? ({ theme }) => theme.colors.primarybg : ""};
+`;
+
 export const Container = styled.div`
   width: 100%;
   max-width: 1300px;
@@ -71,8 +85,24 @@ export const ImageContainer = styled.div`
   > img {
     display: block;
     margin: auto;
-    width: 80%;
+    width: 100%;
   }
+`;
+
+
+export const Avatar = styled.div`
+
+
+height: ${(props)=>props.radius};
+width: ${(props)=>props.radius};
+background-color:#835A3A ;
+border: 2px solid #3C7C90;
+border-radius: 100%;
+img{
+    height:${(props)=>props.radius};
+    width:${(props)=>props.radius};
+    border-radius: 100%;
+}
 `;
 
 export const Color = styled.span`
@@ -87,9 +117,10 @@ export const Button = styled.button`
   background-color: ${(props) => (props.primary ? "#3C7C90" : "white")};
   padding: 7px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: ${(props)=>props.radius};
+  width:${(props)=>props.width};
   box-shadow: 5px 10px "#00000";
-  margin: ${(props) => (props.margin ? props.margin : "5px 10px 5px 10px")};
+  margin: ${(props) => (props.margin ? props.margin : "")};
   border: ${(props) =>
     props.primary ? "2px solid #3C7C90" : "2px solid #3C7C90"};
 
