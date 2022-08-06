@@ -47,6 +47,10 @@ export const FlexContainer = styled.div`
   bottom: ${(props) => props.bottom};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
+
+  @media (max-width:900px){
+    flex-direction: column;
+  }
 `;
 export const FlexItem = styled.div`
 position: ${(props)=>props.position};

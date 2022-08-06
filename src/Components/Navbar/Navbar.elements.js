@@ -6,7 +6,6 @@ import { FaSearch, FaBars } from "react-icons/fa";
 export const Nav = styled.div`
   background: #fcffdf;
   height: 80px;
-  
   display: flex;
   justify-content: center;
   align-items: center;

@@ -17,12 +17,19 @@ export const Input = styled.input.attrs({
     
     color: #707070;
     width: 360px;
-    border-radius: 5px;
     height: 50px;
-    border: 1px #3F9DA7 solid;
-    box-shadow: 5px;
+    border: none;
+    
+    box-shadow: 0px 0px 10px;
     padding: 0 10px 0 10px;
     transition: 0.15s;
     
     display: block;
+
+    @media (max-width:900px){
+      width: 240px;
+      height:40px;
+      margin: 0 10px 0 10px;
+      padding: 0 20px 0 20px;
+    }
   `;
