@@ -20,9 +20,9 @@ export const Section = styled.div`
       ? "linear-gradient(to right,#FCFFDF 35%,#ECEFFF 35%)"
       : props.color};
 
-      @media (max-width:900px){
-        background: #FCFFDF;
-      }
+  @media (max-width: 900px) {
+    background: #fcffdf;
+  }
 `;
 
 export const StyledContainer = styled.div`
@@ -42,7 +42,7 @@ export const StyledContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   position: ${(props) => props.position};
-  flex-direction: ${(props) => props.direction};
+  flex-direction: ${(props) => props.direction} !important;
   align-items: ${(props) => props.align};
   justify-content: ${(props) => props.justify};
   margin: ${(props) => props.margin};
@@ -51,12 +51,12 @@ export const FlexContainer = styled.div`
   left: ${(props) => props.left};
   right: ${(props) => props.right};
 
-  @media (max-width:900px){
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
 export const FlexItem = styled.div`
-position: ${(props)=>props.position};
+  position: ${(props) => props.position};
   flex: ${(props) => props.flex};
 `;
 
@@ -82,12 +82,9 @@ export const Container = styled.div`
     padding-right: 10px;
     padding-left: 10px;
   }
-  
 `;
 
 export const ImageContainer = styled.div`
-  
-
   > img {
     display: block;
     margin: auto;
@@ -95,22 +92,26 @@ export const ImageContainer = styled.div`
   }
 `;
 
-
 export const Avatar = styled.div`
-
-
-height: ${(props)=>props.radius};
-width: ${(props)=>props.radius};
-background-color:#835A3A ;
-border: 2px solid #3C7C90;
-border-radius: 100%;
-img{
-    height:${(props)=>props.radius};
-    width:${(props)=>props.radius};
+  height: ${(props) => props.radius};
+  width: ${(props) => props.radius};
+  background-color: #835a3a;
+  border: 2px solid #3c7c90;
+  border-radius: 100%;
+  img {
+    height: ${(props) => props.radius};
+    width: ${(props) => props.radius};
     border-radius: 100%;
-}
+  }
+  @media (max-width: 900px) {
+    height: 50px;
+    width: 50px;
+    > img {
+      height: 50px;
+      width: 50px;
+    }
+  }
 `;
-
 
 export const Color = styled.span`
   color: ${(props) => props.color};
@@ -118,14 +119,12 @@ export const Color = styled.span`
 export default GlobalStyle;
 
 export const Button = styled.button`
-  
-
   color: ${(props) => (props.primary ? "white" : "#3C7C90")};
   background-color: ${(props) => (props.primary ? "#3C7C90" : "white")};
   padding: 7px;
   font-weight: 600;
-  border-radius: ${(props)=>props.radius};
-  width:${(props)=>props.width};
+  border-radius: ${(props) => props.radius};
+  width: ${(props) => props.width};
   box-shadow: 5px 10px "#00000";
   margin: ${(props) => (props.margin ? props.margin : "")};
   border: ${(props) =>
@@ -138,16 +137,18 @@ export const Button = styled.button`
   }
 `;
 
-
-
-
 export const TextStyle = styled.p`
-color: ${(props) => props.color};
-text-align: ${(props) => props.align};
-font-size: ${(props) => props.size};
-font-weight: ${(props) => props.weight};
-margin: ${(props) => props.margin};
-`
+  color: ${(props) => props.color};
+
+  font-size: ${(props) => props.size};
+  font-weight: ${(props) => props.weight};
+  margin: ${(props) => props.margin};
+  text-align: ${(props) => props.align};
+  @media (max-width: 900px) {
+    margin: 10px 0 10px 0;
+    text-align: center;
+  }
+`;
 
 export const HorizontalScrollable = styled.div`
   overflow: auto;
@@ -159,4 +160,3 @@ export const HorizontalScrollable = styled.div`
     margin: 0;
   }
 `;
-

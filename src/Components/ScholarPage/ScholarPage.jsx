@@ -12,7 +12,7 @@ function ScholarPage() {
     return <ChannelCard name={details.name}></ChannelCard>;
   }
   return (
-    <Section height="100vh">
+    <>
       <TextStyle weight="500" align="center" size="1.2em">
         Online Islamic Content
       </TextStyle>
@@ -31,7 +31,7 @@ function ScholarPage() {
       <HorizontalScrollable>
         {scholars.map(createChannelCard)}
       </HorizontalScrollable>
-    </Section>
+    </>
   );
 }
 
