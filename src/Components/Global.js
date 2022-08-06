@@ -75,6 +75,7 @@ export const Container = styled.div`
     padding-right: 10px;
     padding-left: 10px;
   }
+  
 `;
 
 export const ImageContainer = styled.div`
@@ -104,6 +105,7 @@ img{
     border-radius: 100%;
 }
 `;
+
 
 export const Color = styled.span`
   color: ${(props) => props.color};
