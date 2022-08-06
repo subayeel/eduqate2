@@ -27,9 +27,9 @@ export const Input = styled.input.attrs({
     display: block;
 
     @media (max-width:900px){
-      width: 240px;
+      width: 280px;
       height:40px;
-      margin: 0 10px 0 10px;
+      margin: 0 5px 0 5px;
       padding: 0 20px 0 20px;
     }
   `;

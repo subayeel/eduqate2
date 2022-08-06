@@ -14,12 +14,15 @@ body{
 
 export const Section = styled.div`
   height: ${(props) => props.height};
-  width: 100vw;
 
   background: ${(props) =>
     props.gradient
       ? "linear-gradient(to right,#FCFFDF 35%,#ECEFFF 35%)"
       : props.color};
+
+      @media (max-width:900px){
+        background: #FCFFDF;
+      }
 `;
 
 export const StyledContainer = styled.div`
@@ -83,14 +86,12 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  width: ${(props) => props.width};
-
-  position: relative;
+  
 
   > img {
     display: block;
     margin: auto;
-    width: 100%;
+    width: ${(props) => props.width};
   }
 `;
 
