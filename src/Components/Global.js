@@ -161,6 +161,7 @@ export const TextStyle = styled.div`
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.align};
+  
   overflow: auto;
   display: ${props=>props.display};
   transition: 0.5s;

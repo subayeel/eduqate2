@@ -1,7 +1,6 @@
 import React from "react";
-import { TextStyle } from "../Global";
+import { FlexContainer, FlexItem, TextStyle } from "../Global";
 import {
-  DrawerContainer,
   StyledDrawer,
   DrawerButton,
   DrawerContent,
@@ -11,10 +10,14 @@ function Drawer(props) {
     var state = props.state;
     var setState = props.setState;
   return (
-    <DrawerContainer>
+    
       <StyledDrawer>
         <DrawerButton first={props.first} onClick={() => setState(!state)}>
-          <TextStyle weight="500" size="1.2em">What is your name?</TextStyle>
+        <FlexContainer align="center">
+            <FlexItem flex="90%"><TextStyle align="left" weight="500" size="1.2em">What is your name?</TextStyle></FlexItem>
+            <FlexItem flex="1%"><span>&#8595;</span></FlexItem>
+        </FlexContainer>
+          
         </DrawerButton>
         <DrawerContent height={props.state ? "200px" : "0px"}>
           W Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
@@ -25,7 +28,7 @@ function Drawer(props) {
           ipsam quis reprehenderit consequuntur corporis!
         </DrawerContent>
       </StyledDrawer>
-    </DrawerContainer>
+    
   );
 }
 
