@@ -6,10 +6,10 @@ import ScholarCard from "../ScholarCard/ScholarCard";
 
 function ScholarPage() {
   function createScholarCard(details) {
-    return <ScholarCard name={details.name}></ScholarCard>;
+    return <ScholarCard name={details.name} ytLink={details.ytLink} wLink={details.wLink} desc={details.desc}></ScholarCard>;
   }
   function createChannelCard(details) {
-    return <ChannelCard name={details.name}></ChannelCard>;
+    return <ChannelCard name={details.name} ></ChannelCard>;
   }
   return (
     <>

@@ -41,6 +41,7 @@ export const StyledContainer = styled.div`
 
 export const FlexContainer = styled.div`
   display: flex;
+
   position: ${(props) => props.position};
   flex-direction: ${(props) => props.direction} !important;
   align-items: ${(props) => props.align};
@@ -63,15 +64,28 @@ export const FlexItem = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   position: relative;
+  grid-template-rows: repeat(4,40px);
 `;
 
 export const GridItem = styled.div`
+  display: flex;
+  align-items: center;
+  
+  
   grid-column-start: ${(props) => props.colstart};
   grid-column-end: ${(props) => props.colend};
   grid-row-start: ${(props) => props.rowstart};
   grid-row-end: ${(props) => props.rowend};
   background-color: ${(props) =>
     props.bgcolor ? ({ theme }) => theme.colors.primarybg : ""};
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: stretch;
+    grid-column-start: 1 !important;
+    grid-column-end: 10 !important;
+    grid-row-start: 2 !important;
+    grid-row-end: 4 !important;
+  }
 `;
 
 export const Container = styled.div`
@@ -85,10 +99,11 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  width: ${(props) => props.width};
   > img {
     display: block;
     margin: auto;
-    width: ${(props) => props.width};
+    width: 70%;
   }
 `;
 
@@ -137,13 +152,13 @@ export const Button = styled.button`
   }
 `;
 
-export const TextStyle = styled.p`
+export const TextStyle = styled.div`
   color: ${(props) => props.color};
-
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.align};
+  overflow: auto;
   @media (max-width: 900px) {
     margin: 10px 0 10px 0;
     text-align: center;

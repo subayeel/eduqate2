@@ -1,27 +1,60 @@
-const scholars=[{
+const scholars = [
+  {
     key: 1,
-    name: "Fish Fry",
-  },{
-    key:2,
-    name: 'Chicken Chukka',
-  },{
-    key:3,
-    name: 'Mutton Chukka',
-  },{
-    key:4,
-    name: 'Fried Rice',
-  },{
-    key:5,
-    name: 'Fried Rice',
-  },{
-    key:6,
-    name: 'Fried Rice',
+    imageUrl: "",
+    name: "Scholar 1",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
   },
   {
-    key:7,
-    name: 'Fried Rice',
+    key: 2,
+    imageUrl: "",
+    name: "Scholar 2",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
   },
- ];
+  {
+    key: 3,
+    imageUrl: "",
+    name: "Scholar 3",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
+  },
+  {
+    key: 4,
+    imageUrl: "",
+    name: "Scholar 4",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
+  },
+  {
+    key: 5,
+    imageUrl: "",
+    name: "Scholar 5",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
+  },
+  {
+    key: 6,
+    imageUrl: "",
+    name: "Scholar 6",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
+  },
+  {
+    key: 7,
+    imageUrl: "",
+    name: "Scholar 7",
+    desc: "A very well known Islamic scholar from Indonesia with in depth knowledge of Quran and Hadeeth.",
+    ytLink: "www.youtube.com/scholar1",
+    wLink: "www.scholar.com",
+  },
+];
 
 export default scholars;
-

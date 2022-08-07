@@ -4,17 +4,22 @@ import {
   FlexContainer,
   FlexItem,
   StyledContainer,
-  ImageContainer
+  ImageContainer,
 } from "../Global";
 import { YoutubeIcon, WebIcon } from "./ScholarCard.elements";
 
 function ScholarCard(props) {
   return (
     <div>
-      <FlexContainer margin="0 0 10px 0" justify="center" align="center" direction="column">
+      <FlexContainer
+        margin="0 0 10px 0"
+        justify="center"
+        align="center"
+        direction="column"
+      >
         <FlexItem flex="40%">
-          <ImageContainer width="350px">
-            <img src={process.env.PUBLIC_URL + "images/scholar1.png"} />
+          <ImageContainer width="360px">
+            <img src="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/tariq_hameel_moulana-removebg-preview.png?alt=media&token=737ec21c-3be6-4ed8-a0af-c3537d90405c" />
           </ImageContainer>
         </FlexItem>
         <FlexItem flex="10%">
@@ -42,13 +47,12 @@ function ScholarCard(props) {
             shadow
             padding="10px"
             bgcolor="#ECEFFF"
-            height="140px"
             width="250px"
-            radius="0 0 10px 10px"
           >
             <TextStyle size="0.8em" color="#555555">
               {props.desc}
             </TextStyle>
+
             <FlexContainer
               margin="20px 0 0 0"
               justify="center"
@@ -60,7 +64,7 @@ function ScholarCard(props) {
               </FlexItem>
               <FlexItem flex="85%">
                 <TextStyle size="0.8em" color="#555555">
-                  {props.ytlink}
+                  {props.ytLink}
                 </TextStyle>
               </FlexItem>
             </FlexContainer>
@@ -70,7 +74,7 @@ function ScholarCard(props) {
               </FlexItem>
               <FlexItem flex="85%">
                 <TextStyle size="0.8em" color="#555555">
-                  {props.website}
+                  {props.wLink}
                 </TextStyle>
               </FlexItem>
             </FlexContainer>
