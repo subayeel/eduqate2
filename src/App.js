@@ -6,6 +6,7 @@ import HeroPage from "./Components/Heropage/HeroPage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import  ScholarPage  from "./Components/ScholarPage/ScholarPage";
+import Misconception from "./Components/MisconceptionPage/Misconception";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Navbar />
         <HeroPage />
         <ScholarPage/>
+        <Misconception/>
         
       </Router>
     </ThemeProvider>

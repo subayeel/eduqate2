@@ -14,6 +14,7 @@ body{
 
 export const Section = styled.div`
   height: ${(props) => props.height};
+  padding:${props=>props.padding};
 
   background: ${(props) =>
     props.gradient
@@ -27,6 +28,7 @@ export const Section = styled.div`
 
 export const StyledContainer = styled.div`
   display: inline-block;
+  position:${props=>props.position};
   padding: ${(props) => props.padding};
   border-radius: ${(props) => (props.radius ? props.radius : "0")};
   height: ${(props) => props.height};
@@ -36,6 +38,7 @@ export const StyledContainer = styled.div`
   box-shadow: ${(props) => (props.shadow ? "2px 2px 8px #888888" : "")};
   background-color: ${(props) => props.bgcolor};
   color: ${(props) => props.color};
+  transition: 0.5s;
   text-align: center;
 `;
 
@@ -159,6 +162,8 @@ export const TextStyle = styled.div`
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.align};
   overflow: auto;
+  display: ${props=>props.display};
+  transition: 0.5s;
   @media (max-width: 900px) {
     margin: 10px 0 10px 0;
     text-align: center;
