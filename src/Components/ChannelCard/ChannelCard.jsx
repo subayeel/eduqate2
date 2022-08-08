@@ -31,12 +31,14 @@ function ChannelCard(props) {
             </Avatar>
           </FlexItem>
           <FlexItem flex="40%">
+          <FlexContainer align="flex-start" direction="column">
             <TextStyle size="1.4em" weight="600" margin="0">
               {props.name}
             </TextStyle>
             <TextStyle size="1.2em" weight="400" margin="0">
               500K Subscribers
             </TextStyle>
+            </FlexContainer>
           </FlexItem>
           <FlexItem flex="30%">
             <Button margin="0 10px 0 10px" width="150px" primary>

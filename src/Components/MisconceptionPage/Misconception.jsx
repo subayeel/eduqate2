@@ -18,11 +18,11 @@ function Misconception(props) {
   const [state5, setState5] = useState(false);
 
   return (
-    <Section padding="10px" color="#EEEEEE" height="100vh">
+    <Section padding="10px" color="#EEEEEE">
       <TextStyle margin="10px" size="1.2em" weight="600" align="center">
         Misconception
       </TextStyle>
-      <FlexContainer>
+      <FlexContainer mobileColumn>
         <FlexItem flex="1">
           <TextStyle weight="500" margin="30px 0 30px 0">Related Topics</TextStyle>
 

@@ -15,7 +15,7 @@ function Drawer(props) {
         <DrawerButton first={props.first} onClick={() => setState(!state)}>
         <FlexContainer align="center">
             <FlexItem flex="90%"><TextStyle align="left" weight="500" size="1.2em">What is your name?</TextStyle></FlexItem>
-            <FlexItem flex="1%"><span>&#8595;</span></FlexItem>
+            
         </FlexContainer>
           
         </DrawerButton>

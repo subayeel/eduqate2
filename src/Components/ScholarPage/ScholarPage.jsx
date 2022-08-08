@@ -13,7 +13,7 @@ function ScholarPage() {
   }
   return (
     <>
-      <TextStyle weight="500" align="center" size="1.2em">
+      <TextStyle margin="0 0 0 20px" weight="500" align="center" size="1.2em">
         Online Islamic Content
       </TextStyle>
       <HorizontalScrollable>

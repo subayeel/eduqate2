@@ -14,7 +14,7 @@ import {
 
 function HeroPage() {
   return (
-    <FlexContainer marign="20px 0 0 0">
+    <FlexContainer mobileColumn marign="20px 0 0 0">
       <FlexItem flex="35%">
         <FlexContainer direction="column" align="center">
           <ImageContainer width="360px">

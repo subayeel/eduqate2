@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container } from "../Global";
 import { FaSearch, FaBars } from "react-icons/fa";
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
   background-color: #ffffff;
   box-shadow: 0px 20 px 10px;
   height: 80px;

@@ -14,7 +14,7 @@ body{
 
 export const Section = styled.div`
   height: ${(props) => props.height};
-  padding:${props=>props.padding};
+  padding: ${(props) => props.padding};
 
   background: ${(props) =>
     props.gradient
@@ -27,8 +27,8 @@ export const Section = styled.div`
 `;
 
 export const StyledContainer = styled.div`
-  display: inline-block;
-  position:${props=>props.position};
+  display: block;
+  position: ${(props) => props.position};
   padding: ${(props) => props.padding};
   border-radius: ${(props) => (props.radius ? props.radius : "0")};
   height: ${(props) => props.height};
@@ -46,7 +46,7 @@ export const FlexContainer = styled.div`
   display: flex;
 
   position: ${(props) => props.position};
-  flex-direction: ${(props) => props.direction} !important;
+  flex-direction: ${(props) => props.direction};
   align-items: ${(props) => props.align};
   justify-content: ${(props) => props.justify};
   margin: ${(props) => props.margin};
@@ -56,7 +56,8 @@ export const FlexContainer = styled.div`
   right: ${(props) => props.right};
 
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-direction: ${(props) => (props.mobileColumn ? "column" : "")};
+    justify-content: center;
   }
 `;
 export const FlexItem = styled.div`
@@ -67,14 +68,13 @@ export const FlexItem = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   position: relative;
-  grid-template-rows: repeat(4,40px);
+  grid-template-rows: repeat(4, 40px);
 `;
 
 export const GridItem = styled.div`
   display: flex;
   align-items: center;
-  
-  
+
   grid-column-start: ${(props) => props.colstart};
   grid-column-end: ${(props) => props.colend};
   grid-row-start: ${(props) => props.rowstart};
@@ -153,17 +153,19 @@ export const Button = styled.button`
     color: ${(props) => (props.primary ? "#3C7C90" : "white")};
     background-color: ${(props) => (props.primary ? "white" : "#3C7C90")};
   }
+  
 `;
 
 export const TextStyle = styled.div`
+  display: inline-block;
   color: ${(props) => props.color};
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.align};
-  
+
   overflow: auto;
-  display: ${props=>props.display};
+  display: ${(props) => props.display};
   transition: 0.5s;
   @media (max-width: 900px) {
     margin: 10px 0 10px 0;
@@ -180,4 +182,8 @@ export const HorizontalScrollable = styled.div`
     display: inline-block;
     margin: 0;
   }
+`;
+
+export const StyledAnchor = styled.a`
+  text-decoration: none;
 `;
