@@ -7,7 +7,7 @@ width: 30px;
 height: auto;
 justify-self: flex-end;
 align-items: center;
-${FaYoutube}
+
 `
 export const WebIcon = styled(FaInternetExplorer)`
 color: skyblue;
@@ -15,7 +15,7 @@ width: 30px;
 height: auto;
 justify-self: flex-end;
 align-items: center;
-${FaYoutube}
+
 `
 
 

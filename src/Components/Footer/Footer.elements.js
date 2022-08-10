@@ -68,11 +68,11 @@ export const FooterLikeIcon = styled(FaThumbsUp)`
   color: ${props=>props.color?props.color:"white"};
 
   &:hover{
-    color:#999999;
+    color:#e6e6e6;
     cursor: pointer;
     transition: 0.5s;
     
-    transform: scale(1.6,1.6) rotate(360deg);
+    transform: scale(1.6,1.6);
   }
 `;
 

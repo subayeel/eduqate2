@@ -9,10 +9,13 @@ import {
 function Drawer(props) {
     var state = props.state;
     var setState = props.setState;
+    
+    
   return (
     
       <StyledDrawer>
         <DrawerButton first={props.first} onClick={() => setState(!state)}>
+        
         <FlexContainer align="center">
             <FlexItem flex="90%"><TextStyle align="left" weight="500" size="1.2em">What is your name?</TextStyle></FlexItem>
             
@@ -30,6 +33,7 @@ function Drawer(props) {
       </StyledDrawer>
     
   );
+  console.log(state);
 }
 
 export default Drawer;

@@ -12,15 +12,20 @@ import {
   SearchIcon,
   NavSearch,
 } from "./Navbar.elements";
+import SideMenu from "./SideMenu";
 
 import { Avatar } from "../Global";
+import { useState } from "react";
 
 function Navbar() {
+  const [menuState,toggleMenu] = useState(false);
+  console.log(menuState)
   return (
     <Nav>
-      <NavIcon>
-        <BarsIcon />
+      <NavIcon onClick={()=>toggleMenu(!menuState)}>
+        <BarsIcon  />
       </NavIcon>
+      
 
       <NavLogo to="/">
         <img
@@ -47,6 +52,7 @@ function Navbar() {
       <NavIcon>
         <SearchIcon margin="0 20px 0 0" color="#3C7C90"/>
       </NavIcon>
+      <SideMenu state={menuState} setState={toggleMenu}/>
     </Nav>
   );
 }

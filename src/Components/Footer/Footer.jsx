@@ -74,7 +74,7 @@ function Footer() {
       <FlexContainer justify="center">
         <FooterLikeIcon
           onClick={() => setLike(!likeState)}
-          color={likeState ? "" : "#835A3A"}
+          color={likeState ? "" : "#7FFC1A"}
         />
       </FlexContainer>
       <FlexContainer align="center" justify="center">

@@ -11,10 +11,12 @@ import {
   GridContainer,
   GridItem
 } from "../Global";
+import Navbar from "../Navbar/Navbar";
 
 function HeroPage() {
   return (
-    <FlexContainer mobileColumn marign="20px 0 0 0">
+    <FlexContainer mobileColumn marign="100px 0 0 0">
+    
       <FlexItem flex="35%">
         <FlexContainer direction="column" align="center">
           <ImageContainer width="360px">

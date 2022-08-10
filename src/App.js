@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import  ScholarPage  from "./Components/ScholarPage/ScholarPage";
 import Misconception from "./Components/MisconceptionPage/Misconception";
 import Footer from "./Components/Footer/Footer";
+import SideMenu from "./Components/Navbar/SideMenu";
 
 
 function App() {

@@ -4,14 +4,16 @@ import { Container } from "../Global";
 import { FaSearch, FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
+  position: sticky;
   background-color: #ffffff;
   box-shadow: 0px 20 px 10px;
   height: 80px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
-  @media (max-width:900px){
+  @media (max-width: 900px) {
     justify-content: space-between;
   }
 `;
@@ -47,8 +49,11 @@ export const NavLogo = styled(Link)`
 `;
 
 export const NavIcon = styled.div`
+&:hover{
+  color:whitesmoke;
+  cursor: pointer;
+}
   @media (min-width: 900px) {
-    
     display: none;
   }
 `;
@@ -69,8 +74,6 @@ export const NavAvatar = styled.div`
 `;
 
 export const NavItems = styled.ul`
-  display: inline;
-
   align-items: center;
   list-style: none;
   justify-self: end;
@@ -99,11 +102,38 @@ export const Item = styled.li`
 `;
 
 export const SearchIcon = styled(FaSearch)`
-  color: ${(props)=>props.color};
-  margin:${(props)=>props.margin};
+  color: ${(props) => props.color};
+  margin: ${(props) => props.margin};
   height: 20px;
   width: 20px;
   justify-self: center;
   align-items: center;
-  ${FaSearch}
+`;
+
+export const MobileMenu = styled.div`
+  position: absolute;
+  display: none;
+  background-color: #5f9dac;
+  top: 80px;
+  left: ${(props) => (props.state ? "0" : "-100%")};
+  transition: 0.5s;
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  ul{
+    list-style: none;
+    padding: 0;
+
+  }
+  
+  li{
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-size: 1.0em;
+    font-weight: 600;
+    color: whitesmoke;
+  }
+  @media (max-width: 900px) {
+    display: block;
+  }
 `;

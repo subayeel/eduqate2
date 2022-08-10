@@ -14,6 +14,7 @@ body{
 
 export const Section = styled.div`
   height: ${(props) => props.height};
+  width:${(props)=>props.width};
   padding: ${(props) => props.padding};
 
   background: ${(props) =>
