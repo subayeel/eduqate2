@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/eduqate2/static/js/main.ff70805d.js",
+    "main.js": "/eduqate2/static/js/main.ba7d0009.js",
     "index.html": "/eduqate2/index.html",
-    "main.ff70805d.js.map": "/eduqate2/static/js/main.ff70805d.js.map"
+    "main.ba7d0009.js.map": "/eduqate2/static/js/main.ba7d0009.js.map"
   },
   "entrypoints": [
-    "static/js/main.ff70805d.js"
+    "static/js/main.ba7d0009.js"
   ]
 }
