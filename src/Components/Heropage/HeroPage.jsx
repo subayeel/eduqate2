@@ -11,7 +11,6 @@ import {
   GridContainer,
   GridItem
 } from "../Global";
-import Navbar from "../Navbar/Navbar";
 
 function HeroPage() {
   return (

@@ -5,11 +5,11 @@ import Navbar from "./Components/Navbar/Navbar";
 import HeroPage from "./Components/Heropage/HeroPage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import  ScholarPage  from "./Components/ScholarPage/ScholarPage";
+import ScholarPage from "./Components/ScholarPage/ScholarPage";
 import Misconception from "./Components/MisconceptionPage/Misconception";
 import Footer from "./Components/Footer/Footer";
-import SideMenu from "./Components/Navbar/SideMenu";
-
+import Sidebar from "./Components/SideBar/Sidebar";
+import Home from "./Pages/Home";
 
 function App() {
   const theme = {
@@ -24,12 +24,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
+        <Home/>
+        {/* <Sidebar/>
         <Navbar />
         <HeroPage />
-        <ScholarPage/>
-        <Misconception/>
-        <Footer/>
-        
+        <ScholarPage />
+        <Misconception />
+        <Footer /> */}
       </Router>
     </ThemeProvider>
   );
