@@ -15,7 +15,10 @@ import {
   SearchBar,
   SearchBarWrap,
   TextWrapper,
+  Subtitle,
 } from "./Hero.elements";
+import HeroMessage from "./HeroMessage";
+import { dailyMsg1, dailyMsg2 } from "../../Data/heroPageData";
 
 const Hero = () => {
   return (
@@ -34,27 +37,54 @@ const Hero = () => {
               <SearchBarWrap>
                 <SearchBar />
               </SearchBarWrap>
+              <Heading>Why Islam?</Heading>
+              <Subtitle>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Praesentium veniam aperiam vero aliquam labore quaerat nostrum
+                tempora at. Voluptatibus, a.
+              </Subtitle>
+              <BtnWrap right="0">
+                <Button
+                  to="home"
+                  smooth="true"
+                  spy="true"
+                  duration={500}
+                  offset={-80}
+                  primary
+                >
+                  Learn Quran
+                </Button>
+              </BtnWrap>
             </Column1>
             <Column2>
               <TextWrapper>
-                <TopLine>Verse of the Day</TopLine>
-                <Heading>
-                  "He knows what is within the heavens and earth and knows what
-                  you conceal and what you declare. And Allah (SWT) is Knowing
-                  of that within the breasts."
-                </Heading>
-                <BottomLine>At-Taghabun 64:4</BottomLine>
-                <TopLine>Hadeeth of the Day</TopLine>
-                <Heading>
-                  “Whoever is kind, God will be kind to him; therefore be kind
-                  to man on earth. He Who is in heaven will then show mercy to
-                  you” [1]
-                </Heading>
-                <BottomLine>Ithna ‘Ashariyyah, p. 226</BottomLine>
+                <HeroMessage {...dailyMsg1} />
+                <HeroMessage {...dailyMsg2} />
               </TextWrapper>
-              {/* <BtnWrap>
-                <Button to=""></Button>
-              </BtnWrap> */}
+              <BtnWrap right="32px">
+                <Button
+                  to="home"
+                  smooth="true"
+                  spy="true"
+                  duration={500}
+                  offset={-80}
+                  margin
+                  primary
+                >
+                  Learn Quran
+                </Button>
+                <Button
+                  to="home"
+                  smooth="true"
+                  spy="true"
+                  duration={500}
+                  offset={-80}
+                  margin
+                  primary
+                >
+                  Learn Quran
+                </Button>
+              </BtnWrap>
             </Column2>
           </HeroRow>
         </HeroWrapper>

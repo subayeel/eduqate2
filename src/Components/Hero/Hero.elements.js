@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   color: #fff;
-  background: linear-gradient(90deg, #fcffdf 35%, #ecefff 65%);
+  
 
   @media screen and (max-width: 768px) {
    
@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
 export const HeroWrapper = styled.div`
   display: grid;
   position: relative;
-  height: 660px;
+  height: 580px;
   width: 100%;
   max-width: 1300px;
   margin-left: auto;
@@ -33,12 +33,12 @@ export const HeroRow = styled.div`
 
 export const Column1 = styled.div`
   height: 100%;
-  background-color: #fcffdf;
+  position: relative;
   width: 100%;
   grid-area: col1;
 `;
 export const Column2 = styled.div`
-  background-color: #ecefff;
+  position: relative;
   height: 100%;
   grid-area: col2;
   @media screen and (max-width: 768px) {
@@ -51,6 +51,7 @@ export const SearchBarWrap = styled.div`
   width: 100%;
   max-width: 550px;
   margin: auto;
+  
   display: flex;
   justify-content: center;
 `;
@@ -61,9 +62,10 @@ export const SearchBar = styled.input.attrs({
   cursor: pointer;
 
   color: #707070;
-  width: 360px;
+  width: 100%;
   height: 50px;
   border: none;
+  
 
   box-shadow: 0px 0px 10px;
   padding: 0 10px 0 10px;
@@ -80,8 +82,8 @@ export const SearchBar = styled.input.attrs({
 `;
 
 export const TextWrapper = styled.div`
-  height: 100%;
-  padding: 60px 40px;
+  
+  padding: 10px 40px;
 `;
 
 export const TopLine = styled.p`
@@ -102,7 +104,7 @@ export const BottomLine = styled.p`
 `;
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
@@ -113,7 +115,7 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  max-width: 440px;
+  
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
@@ -122,7 +124,10 @@ export const Subtitle = styled.p`
 
 export const BtnWrap = styled.div`
   display: flex;
-  justify-self: flex-start;
+  position: absolute;
+  bottom: 20px;
+  right: ${(props)=>props.right};
+  justify-content: flex-end;
 `;
 
 export const ImgWrap = styled.div`
@@ -131,10 +136,11 @@ export const ImgWrap = styled.div`
   display: flex;
   margin: 0 auto 0 auto;
   justify-content: center;
+  
 `;
 
 export const Img = styled.img`
-  height: 300px;
+  height: 250px;
   margin: 0 0 10px 0;
-  padding-right: 0;
+  margin: 0;
 `;
