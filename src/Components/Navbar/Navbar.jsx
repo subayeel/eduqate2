@@ -35,7 +35,7 @@ function Navbar({toggle}) {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks  to="about">Topics</NavLinks>
+            <NavLinks  to="/aritclepage">Topics</NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks to="">Content</NavLinks>
@@ -45,7 +45,7 @@ function Navbar({toggle}) {
           </NavItem>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="">Sign In</NavBtnLink>
+          <NavBtnLink to="/signin">Sign In</NavBtnLink>
         </NavBtn>
       </NavbarContainer>
     </Nav>

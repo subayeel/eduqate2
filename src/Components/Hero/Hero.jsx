@@ -37,20 +37,22 @@ const Hero = () => {
               <SearchBarWrap>
                 <SearchBar />
               </SearchBarWrap>
-              <Heading>Why Islam?</Heading>
-              <Subtitle>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Praesentium veniam aperiam vero aliquam labore quaerat nostrum
-                tempora at. Voluptatibus, a.
-              </Subtitle>
-              <BtnWrap right="0">
+              <TextWrapper>
+                <Heading>Why Islam?</Heading>
+                <Subtitle>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium veniam aperiam vero aliquam labore quaerat nostrum
+                  tempora at. Voluptatibus, a.
+                </Subtitle>
+              </TextWrapper>
+              <BtnWrap right="40px">
                 <Button
                   to="home"
                   smooth="true"
                   spy="true"
                   duration={500}
                   offset={-80}
-                  primary
+                  primary="true"
                 >
                   Learn Quran
                 </Button>
@@ -68,8 +70,8 @@ const Hero = () => {
                   spy="true"
                   duration={500}
                   offset={-80}
-                  margin
-                  primary
+                  margin="true"
+                  primary="true"
                 >
                   Learn Quran
                 </Button>
@@ -79,8 +81,8 @@ const Hero = () => {
                   spy="true"
                   duration={500}
                   offset={-80}
-                  margin
-                  primary
+                  margin="true"
+                  primary="true"
                 >
                   Learn Quran
                 </Button>
