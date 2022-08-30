@@ -18,9 +18,13 @@ import {
   Color,
   GoogleContainer,
   IconContainer,
-  GoogleIcon,ShareText,FacebookIcon,FacebookContainer
+  GoogleIcon,
+  ShareText,
+  FacebookIcon,
+  FacebookContainer,
+  LoginButton,
 } from "./LoginSection.elements";
-import { Button } from "../ButtonElement";
+
 const LoginSection = () => {
   return (
     <>
@@ -29,9 +33,9 @@ const LoginSection = () => {
           <LoginForm>
             <TextWrap>
               <Heading>
-                <Color>Beginning!</Color>{" "}
+                <Color>Beginning!</Color>
               </Heading>
-              <BottomLine>the journey towards the light</BottomLine>
+              <BottomLine>the journey towards light.</BottomLine>
             </TextWrap>
             <TextfieldWrap>
               <UserNameField />
@@ -41,9 +45,9 @@ const LoginSection = () => {
             </TextfieldWrap>
             <ForgotPassword to="">Can't remember password?</ForgotPassword>
             <BtnWrap>
-              <Button light to="" primary>
+              <LoginButton light to="" primary>
                 Sign in
-              </Button>
+              </LoginButton>
             </BtnWrap>
 
             <OrLineContainer>
@@ -63,7 +67,7 @@ const LoginSection = () => {
 
             <FacebookContainer>
               <IconContainer>
-                <FacebookIcon/>
+                <FacebookIcon />
               </IconContainer>
               <ShareText>Facebook</ShareText>
             </FacebookContainer>
