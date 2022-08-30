@@ -6,17 +6,18 @@ export const ConceptCardContainer = styled.div`
 `;
 
 export const ConceptCardWrapper = styled.div`
-  display: grid;
+  position: relative;
   z-index: 1;
   max-height:800px ;
   max-width: 1100px;
   margin-right: auto;
-  margin-left: 0;
+  margin-left: auto;
   
   justify-content: center;
 
   &:hover{
     cursor: pointer;
+    
   }
 `;
 
@@ -60,31 +61,29 @@ export const TopLine = styled.p`
   text-transform: uppercase;
 `;
 export const Heading = styled.h1`
-  margin: 0;
+  margin: 14px 0 0 0;
   font-size: 24px;
-  line-height: 1.1;
+  line-height: 24px;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
   &:hover{
     color: #3C7C90;
   }
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-  }
+ 
 `;
 
 export const Subtitle = styled.p`
   
   margin:  10px 0 10px 0;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 12px;
   color: ${({ darkText }) => (darkText ? "black" : "grey")};
 `;
 export const Author = styled.p`
   display: inline;
   font-size: 12px;
-  margin-right: 8px;
-  line-height: 14px;
+  
+  line-height: 12px;
   color: black;
 `;
 export const Date = styled.p`
@@ -101,14 +100,21 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-    
-  height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  
   
 `;
 
 export const Img = styled.img`
+  flex-shrink: 0;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
   
-  width: 100%;
   @media screen and (max-width: 768px) {
     max-height: 300px;
   }

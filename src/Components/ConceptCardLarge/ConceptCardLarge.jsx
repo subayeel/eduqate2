@@ -15,7 +15,7 @@ import {
   Heading,
 } from "./ConceptCardLarge.elements";
 
-const ConceptCardLarge = ({ imgSrc, heading, author, date, desc }) => {
+const ConceptCardLarge = ({ imgSrc, heading, author, date, desc }) => { 
   return (
     <>
       <ConceptCardContainer>

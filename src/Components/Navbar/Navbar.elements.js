@@ -3,31 +3,35 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
-
 export const Nav = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: #EEEEEE;
-  height: 80px;
+  width: 100%;
   
-  
+  height: 50px;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
   @media screen and (max-width: 900px) {
     justify-content: space-between;
     transition: 0.6s all ease;
   }
+
+  
 `;
 export const NavbarContainer = styled.div`
   display: flex;
-  height: 80px;
+  height: 50px;
   width: 100%;
-  
+  background-color: white;
   justify-content: space-between;
   padding: 0 24px;
-  max-width: 1300px;
+  
+  
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -54,17 +58,17 @@ export const MobileIcon = styled.div`
   @media (max-width: 768px) {
     display: block;
     position: absolute;
-    transform: translate(100%, 60%);
+    transform: translate(60%, 50%);
     top: 0;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     cursor: pointer;
   }
 `;
 
 export const NavMenu = styled.ul`
-display: flex;
-padding: 0;
+  display: flex;
+  padding: 0;
   align-items: center;
   text-align: center;
   list-style: none;
@@ -86,39 +90,34 @@ export const NavLinks = styled(LinkR)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-&.active{
-  border-bottom: 2px solid ;
-}
+  &.active {
+    border-bottom: 2px solid;
+  }
 `;
 
 export const NavBtn = styled.nav`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-@media screen and (max-width:768px) {
-  display: none;
-}
-
-`
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 export const NavBtnLink = styled(LinkR)`
-white-space: nowrap;
-border: 2px solid #835A3A;
-background: transparent;
-padding: 5px 22px;
-outline: none;
-color: #835A3A;
-font-size: 16px;
-font-weight: 600;
-text-decoration: none;
+  white-space: nowrap;
+  border: 2px solid #835a3a;
+  background: transparent;
+  padding: 5px 22px;
+  outline: none;
+  color: #835a3a;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
 
-&:hover{
-  transition:all 0.2s ease-in;
-  color: #fff;
-  background-color: #835A3A;
-  
-}
-`
-
-
-
+  &:hover {
+    transition: all 0.2s ease-in;
+    color: #fff;
+    background-color: #835a3a;
+  }
+`;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   color: #fff;
+  margin-top:50px;
   
 
   @media screen and (max-width: 768px) {

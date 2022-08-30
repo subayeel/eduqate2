@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const BrowseSectionContainer = styled.div`
 width: 100%;
 
-margin: auto;
+
 `
 export const BrowseSectionWrapper = styled.div`
-padding: 48px 0 0 40px;
+padding: 60px 0 0 0;
 max-width: 1300px;
 justify-content: center;
 margin-left: auto;
@@ -21,17 +21,25 @@ color: #2c2c2c;
 
 export const Row = styled.div`
 display: grid;
-grid-auto-columns: 1fr 1fr;
+
+@media screen and (max-width:768px){
+    grid-template-columns: repeat(1,1fr);
+}
+@media screen and (min-width:768px){
+    grid-template-columns: repeat(2,1fr);
+}
 `
 
-export const Column1 = styled.div`
+export const Column1 = styled.div` 
 padding: 0 14px;
-grid-area: 1/1/2/2;
+
 `
 
 export const Column2 = styled.div`
 padding: 0 14px;
-grid-area: 1/2/2/3;
+@media screen and (max-width:768px){
+    display: none;
+}
 `
 
 export const MainSection = styled.div`

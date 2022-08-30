@@ -5,17 +5,16 @@ export const ConceptCardContainer = styled.div`
   color: #fff;
 `;
 
-export const ConceptCardWrapper = styled.div`
+export const ConceptCardWrapper = styled.div` 
   display: grid;
   z-index: 1;
-  max-height:200px ;
-  max-width: 800px;
+  max-height:200px;
   margin-right: auto;
   margin-left: 0;
   overflow: hidden;
   padding-bottom: 14px ;
   
-  justify-content: center;
+  justify-content: start;
 
   &:hover{
     cursor: pointer;
@@ -26,7 +25,7 @@ export const ConceptRow1 = styled.div`
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr;
 
-  align-items: start;
+  
   grid-template-areas: 'col1 col2 col3';
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
@@ -38,8 +37,6 @@ export const ConceptRow1 = styled.div`
 export const Column1 = styled.div`
   
   grid-area: 1/1/2/2;
-  justify-content: start;
-  align-items: flex-start;
 `;
 export const Column2 = styled.div`
   
@@ -48,9 +45,9 @@ export const Column2 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  
   padding: 0 0 0 14px;
-  text-overflow:ellipsis;
+  
 `;
 
 export const TopLine = styled.p`
@@ -113,8 +110,10 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   
-  height: 100%;
-  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
   @media screen and (max-width: 768px) {
     max-height: 300px;
   }

@@ -6,7 +6,7 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavbarContainer,
+  NavbarContainer, 
   NavLinks,
   NavBtn,
   NavBtnLink,
@@ -21,7 +21,7 @@ function Navbar({toggle}) {
       <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
-        <NavLogo to="/">
+        <NavLogo to="/"> 
           <img
             src="https://firebasestorage.googleapis.com/v0/b/eduqate-d65f5.appspot.com/o/eduqate_logo.png?alt=media&token=357e514e-bd92-45ce-ae28-23675c21b853"
             alt=""

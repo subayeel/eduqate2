@@ -21,18 +21,15 @@ const ConceptCard = ({ imgSrc, heading, author, date, desc }) => {
       <ConceptCardContainer>
         <ConceptCardWrapper>
           <ConceptRow1>
-          <ImgWrap>
-          <Img src={imgSrc}/>
-          </ImgWrap>
-            
+            <ImgWrap>
+              <Img src={imgSrc} />
+            </ImgWrap>
 
             <Column2>
               <TextWrapper>
                 <Heading>{heading}</Heading>
-
                 <Author>{author}</Author>
                 <Date>{date}</Date>
-
                 <Subtitle>{desc}</Subtitle>
               </TextWrapper>
             </Column2>

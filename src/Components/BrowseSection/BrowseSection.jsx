@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ConceptCardLarge from "../ConceptCardLarge/ConceptCardLarge";
 import ConceptCardSmall from "../ConceptCardSmall/ConceptCardSmall";
 import ConceptCard from "../ConceptCard/ConceptCard";
@@ -11,45 +11,45 @@ import {
   Column2,
   MainSection,
 } from "./BrowseSection.elements";
-import {conceptObj1} from '../../Data/conceptCardData'
-const BrowseSection = ({heroCard,heroSmallCard,mainCard}) => {
+import { db } from "../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
+
+const BrowseSection = ({ heroCard, heroSmallCard, mainCard }) => {
+  const [info, setInfo] = useState([]);
+  const collectionRef = collection(db, "q_misconception");
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getDocs(collectionRef);
+
+      setInfo(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getData();
+  }, []);
   return (
     <>
       <BrowseSectionContainer>
         <BrowseSectionWrapper>
-          
-            <Row>
-              <Column1>
-                <ConceptCardLarge {...heroCard}/>
-              </Column1>
-              <Column2>
+          <Row>
+            <Column1>
+              {info.map((inf) => {
+                return <ConceptCardLarge {...inf} />;
+              })}
+            </Column1>
+            <Column2>
               {/* add filter and limit no. of children */}
-                <ConceptCardSmall {...heroSmallCard}/>
-                <ConceptCardSmall {...heroSmallCard}/>
-                <ConceptCardSmall {...heroSmallCard}/>
-                <ConceptCardSmall {...heroSmallCard}/>
-                <ConceptCardSmall {...heroSmallCard}/>
-                
-              </Column2>
-            </Row>
-          
+              {info.map((inf) => {
+                return <ConceptCardSmall {...inf} />;
+              })}
+            </Column2>
+          </Row>
+
           <MainSection>
-            <Row>
-              <Column1>
+            <Column1>
               {/* add pagination to limit the rendering of children */}
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-                <ConceptCard {...mainCard}/>
-              </Column1>
-              <Column2></Column2>
-            </Row>
+              {info.map((inf) => {
+                return <ConceptCard {...inf} />;
+              })}
+            </Column1>
           </MainSection>
         </BrowseSectionWrapper>
       </BrowseSectionContainer>

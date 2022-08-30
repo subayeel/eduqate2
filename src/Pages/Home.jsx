@@ -3,6 +3,7 @@ import InfoSection from "../Components/InfoSection/InfoSection";
 import Navbar from "../Components/Navbar/Navbar";
 import Sidebar from "../Components/SideBar/Sidebar";
 import Hero from "../Components/Hero/Hero";
+import Footer from '../Components/Footer/Footer'
 import {
   quranSection,
   prophetSection,
@@ -22,9 +23,8 @@ const Home = () => {
       <InfoSection {...quranSection} />
       <InfoSection {...prophetSection} />
       <InfoSection {...currentAffairsSection} />
-      <ConceptCard {...conceptObj1} />
-      <ConceptCardSmall {...conceptObj1}/>
-    </>
+      <Footer/>
+     </>
   );
 };
 

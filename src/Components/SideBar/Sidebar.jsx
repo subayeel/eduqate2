@@ -7,10 +7,10 @@ import {
   SidebarLink,
   SidebarBtnWrap,
   SidebarRoute,
-  SidebarMenu
+  SidebarMenu,
 } from "./Sidebar.elements";
 
-const Sidebar = ({isOpen,toggle}) => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} toggle={toggle}>
       <Icon onClick={toggle}>
@@ -18,10 +18,18 @@ const Sidebar = ({isOpen,toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink onClick={toggle} to=""> Home </SidebarLink>
-          <SidebarLink onClick={toggle} to=""> Conent </SidebarLink>
-          <SidebarLink onClick={toggle} to=""> Topics </SidebarLink>
-          <SidebarLink onClick={toggle} to=""> Misconception </SidebarLink>
+          <SidebarLink onClick={toggle} to="">
+            Home
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="">
+            Content
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="">
+            Topics
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="">
+            Misconception
+          </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrap>
           <SidebarRoute to="/signin"> Sign In</SidebarRoute>
