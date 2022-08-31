@@ -15,7 +15,7 @@ import {
   Heading,
 } from "./ConcepCard.elements";
 
-const ConceptCard = ({ imgSrc, heading, author, date, desc }) => {
+const ConceptCard = ({ imgSrc,link, heading, author, date, desc }) => {
   return (
     <>
       <ConceptCardContainer>
@@ -26,8 +26,8 @@ const ConceptCard = ({ imgSrc, heading, author, date, desc }) => {
             </ImgWrap>
 
             <Column2>
-              <TextWrapper>
-                <Heading>{heading}</Heading>
+              <TextWrapper> 
+                <Heading to={link}>{heading}</Heading>
                 <Author>{author}</Author>
                 <Date>{date}</Date>
                 <Subtitle>{desc}</Subtitle>

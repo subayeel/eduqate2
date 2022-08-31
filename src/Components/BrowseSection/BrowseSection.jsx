@@ -14,7 +14,7 @@ import {
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-const BrowseSection = ({ heroCard, heroSmallCard, mainCard }) => {
+const BrowseSection = () => {
   const [info, setInfo] = useState([]);
   const collectionRef = collection(db, "q_misconception");
   useEffect(() => {
@@ -25,15 +25,18 @@ const BrowseSection = ({ heroCard, heroSmallCard, mainCard }) => {
     };
     getData();
   }, []);
+  
   return (
     <>
       <BrowseSectionContainer>
         <BrowseSectionWrapper>
           <Row>
             <Column1>
-              {info.map((inf) => {
-                return <ConceptCardLarge {...inf} />;
-              })}
+              {info
+                .filter(async (inf) => await( inf.id) < 1)
+                .map((filteredInf) => {
+                  return <ConceptCardLarge {...filteredInf} />;
+                })}
             </Column1>
             <Column2>
               {/* add filter and limit no. of children */}

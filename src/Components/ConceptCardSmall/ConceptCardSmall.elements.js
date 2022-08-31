@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ConceptCardContainer = styled.div`
   display: inline;
   color: #fff;
@@ -9,16 +8,15 @@ export const ConceptCardContainer = styled.div`
 export const ConceptCardWrapper = styled.div`
   display: grid;
   z-index: 1;
-  max-height:200px ;
+  max-height: 200px;
   max-width: 600px;
   margin-right: auto;
   overflow: hidden;
-  
+
   margin-left: 0;
 
-  
   justify-content: center;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 `;
@@ -28,28 +26,23 @@ export const ConceptRow1 = styled.div`
   grid-auto-columns: 1fr 1fr 1fr 1fr;
 
   align-items: start;
-  grid-template-areas: 'col1 col2 col3 col4';
-  
+  grid-template-areas: "col1 col2 col3 col4";
 `;
-
 
 export const Column1 = styled.div`
   margin-bottom: 15px;
-  
+
   grid-area: 1/1/2/2;
-  
 `;
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  
+
   grid-area: 1/2/2/5;
-  
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
-  padding:0 10px 0 10px;
-  
+  padding: 0 10px 0 10px;
 `;
 
 export const TopLine = styled.p`
@@ -62,15 +55,15 @@ export const TopLine = styled.p`
 `;
 export const Heading = styled.h1`
   margin: 0;
-  
+
   font-size: 22px;
   line-height: 1.1;
-  
+
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
 
-  &:hover{
-    color: #3C7C90;
+  &:hover {
+    color: #3c7c90;
   }
 
   @media screen and (max-width: 480px) {
@@ -80,7 +73,7 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
   max-width: 440px;
-  margin:  10px 0 10px 0;
+  margin: 10px 0 10px 0;
   font-size: 16px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "black" : "grey")};
@@ -107,14 +100,19 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-    
-  height: 100%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
 `;
 
 export const Img = styled.img`
-  
-  width: 140px;
+  flex-shrink: 0;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
   @media screen and (max-width: 768px) {
     max-height: 300px;
   }

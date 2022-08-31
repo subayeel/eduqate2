@@ -7,8 +7,8 @@ import LoginPage from "./Pages/LoginPage";
 import ArticlePage from "./Pages/ArticlePage";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
-import BrowsePage from "./Pages/BrowsePage";
-import { browseObj1, browseObj2, browseObj3 } from "./Data/browseSectionData";
+
+import BrowseSection from "./Components/BrowseSection/BrowseSection";
 
 function App() {
   const theme = {
@@ -33,18 +33,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<LoginPage />} />
-          <Route path="/articlePage" element={<ArticlePage />} />
+          <Route path="/articlePage/:id" element={<ArticlePage />} />
           <Route
             path="/browsepage/currentaffairs"
-            element={<BrowsePage data={browseObj1} />}
+            element={<BrowseSection/>}
           />
+            
           <Route
             path="/browsepage/quran"
-            element={<BrowsePage data={browseObj2} />}
+            element={<BrowseSection/>}
           />
           <Route
             path="/browsepage/prophet"
-            element={<BrowsePage data={browseObj3} />}
+            element={<BrowseSection/>}
           />
         </Routes>
       </Router>
