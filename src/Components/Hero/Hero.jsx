@@ -70,7 +70,7 @@ const Hero = () => {
                   spy="true"
                   duration={500}
                   offset={-80}
-                  
+                  margin='0 14px 0 0'
                   primary="true"
                 >
                   Learn Quran
@@ -79,6 +79,7 @@ const Hero = () => {
                   to="home"
                   smooth="true"
                   spy="true"
+                  
                   duration={500}
                   offset={-80}
                   

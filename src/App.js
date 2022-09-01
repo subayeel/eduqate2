@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 
 import BrowseSection from "./Components/BrowseSection/BrowseSection";
+import AddArticle from "./Components/AddArticle/AddArticle";
 
 function App() {
   const theme = {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<LoginPage />} />
           <Route path="/articlePage/:id" element={<ArticlePage />} />
+          <Route path="/addarticle" element={<AddArticle/>}/>        
           <Route
             path="/browsepage/currentaffairs"
             element={<BrowseSection/>}

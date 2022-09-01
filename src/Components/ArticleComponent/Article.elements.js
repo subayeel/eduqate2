@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaCopy } from "react-icons/fa";
 
 export const ArticleContainer = styled.div`
   color: #fff;
@@ -129,7 +130,7 @@ export const TextBoxWrapper = styled.div`
 `;
 export const ToggleButtonsContainer = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 
   top: 0;
 `;
@@ -202,5 +203,26 @@ export const Toggle3 = styled.div`
     cursor: pointer;
 
     transition: 0.5;
+  }
+`;
+
+export const ClipBoardWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+export const ClipboardIcon = styled(FaCopy)`
+  height: 20px;
+  padding: 8px;
+  border: 2px solid #3c7c90;
+  width: 20px;
+  color: #3c7c90;
+  &:hover {
+    cursor: pointer;
+    transition: 0.25s;
+
+    background-color: #3c7c90;
+    color: white;
+    
   }
 `;

@@ -8,16 +8,15 @@ export const ConceptCardContainer = styled.div`
 export const ConceptCardWrapper = styled.div`
   position: relative;
   z-index: 1;
-  max-height:800px ;
+  max-height: 800px;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  
+
   justify-content: center;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
-    
   }
 `;
 
@@ -26,22 +25,19 @@ export const ConceptRow1 = styled.div`
   grid-auto-columns: 1fr 1fr 1fr;
 
   align-items: start;
-  grid-template-areas: 'col1 col2 col3';
+  grid-template-areas: "col1 col2 col3";
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
 `;
 
-
 export const Column1 = styled.div`
-  
   grid-area: 1/1/2/2;
   justify-content: start;
   align-items: flex-start;
 `;
 export const Column2 = styled.div`
-  
   padding: 0 15px;
   grid-area: 1/2/2/4;
 `;
@@ -66,15 +62,13 @@ export const Heading = styled.h1`
   line-height: 24px;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
-  &:hover{
-    color: #3C7C90;
+  &:hover {
+    color: #3c7c90;
   }
- 
 `;
 
 export const Subtitle = styled.p`
-  
-  margin:  10px 0 10px 0;
+  margin: 10px 0 10px 0;
   font-size: 16px;
   line-height: 12px;
   color: ${({ darkText }) => (darkText ? "black" : "grey")};
@@ -82,7 +76,7 @@ export const Subtitle = styled.p`
 export const Author = styled.p`
   display: inline;
   font-size: 12px;
-  
+
   line-height: 12px;
   color: black;
 `;
@@ -100,13 +94,12 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  
-  
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 600px;
 `;
 
 export const Img = styled.img`
@@ -114,7 +107,7 @@ export const Img = styled.img`
   object-fit: cover;
   min-height: 100%;
   min-width: 100%;
-  
+
   @media screen and (max-width: 768px) {
     max-height: 300px;
   }

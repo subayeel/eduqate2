@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Button = styled(Link)`
   border-radius: 0px;
-  margin: ${({ margin }) => (margin ? margin : "0 10px")};
+  margin: ${({ margin }) => (margin ? margin : "")};
   background: ${({ primary }) => (primary ? "#007c90" : "#060606")};
   background-color: ${({ bgColor }) => (bgColor ? bgColor : "")};
   white-space: nowrap;

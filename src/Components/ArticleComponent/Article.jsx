@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebase-config";
 import { collection, getDocs, getDoc, doc } from "firebase/firestore";
 import {
-  ArticleContainer,
+  ArticleContainer, 
   ArticleWrapper,
   TextWrapper,
   Heading,
@@ -21,7 +21,7 @@ import {
   ToggleButtonsWrapper,
   Toggle1,
   Toggle2,
-  Toggle3,
+  Toggle3,ClipBoardWrapper,ClipboardIcon
 } from "./Article.elements";
 
 import ConceptCardSmall from "../ConceptCardSmall/ConceptCardSmall";
@@ -76,6 +76,10 @@ const Article = () => {
               <TextBoxContainer>
                 <TextBoxWrapper>
                   <ToggleButtonsContainer>
+                  <ClipBoardWrapper>
+                    <ClipboardIcon></ClipboardIcon>
+                    
+                  </ClipBoardWrapper>
                     <ToggleButtonsWrapper>
                       <Toggle1
                         isAthiest={isAthiest}

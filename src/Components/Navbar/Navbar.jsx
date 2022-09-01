@@ -46,6 +46,7 @@ function Navbar({toggle}) {
         </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/addarticle">Add</NavBtnLink>
         </NavBtn>
       </NavbarContainer>
     </Nav>

@@ -34,7 +34,7 @@ export const NavbarContainer = styled.div`
   
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(LinkR)` 
   align-items: center;
   justify-content: center;
   display: flex;
@@ -79,7 +79,7 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavItem = styled.li`
-  height: 80px;
+  height: 50px;
 `;
 
 export const NavLinks = styled(LinkR)`
