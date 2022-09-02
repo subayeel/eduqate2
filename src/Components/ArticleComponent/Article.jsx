@@ -31,12 +31,12 @@ const Article = () => {
   const [isChristian, setChristian] = useState(false);
   const [isAthiest, setAthiest] = useState(true);
 
-  const { id } = useParams(); //TO DO: dynamic doc id
+  const { id } = useParams(); 
   const [articleInfo, setArticleInfo] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const docRef = doc(db, "q_misconception", "WqPEZCS4b4u78FmriTh7"); //TO DO:make docId dynamic while uploading
+      const docRef = doc(db, "q_misconception", id); 
       const docSnap = await getDoc(docRef);
 
       const data = docSnap.exists() ? docSnap.data() : null;
@@ -125,7 +125,7 @@ const Article = () => {
               </TextBoxContainer>
             </Column1>
             <Column2>
-              {cardInfo.map((inf) => {
+              {cardInfo.slice(0,4).map((inf) => {
                 return <ConceptCardSmall {...inf} />;
               })}
             </Column2>

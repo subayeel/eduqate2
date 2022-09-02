@@ -33,14 +33,14 @@ const BrowseSection = () => {
           <Row>
             <Column1>
               {info
-                .filter(async (inf) => await( inf.id) < 1)
+                .slice(0,1)
                 .map((filteredInf) => {
                   return <ConceptCardLarge {...filteredInf} />;
                 })}
             </Column1>
             <Column2>
               {/* add filter and limit no. of children */}
-              {info.map((inf) => {
+              {info.slice(0,4).map((inf) => {
                 return <ConceptCardSmall {...inf} />;
               })}
             </Column2>

@@ -1,15 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AddArticleContainer } from "./AddArticle.elements";
-import { collection, addDoc,doc ,setDoc} from "firebase/firestore";
+import { collection, getDoc, addDoc, doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 
 const AddArticle = () => {
   const [inputs, setInputs] = useState({});
+  const [articleId, setArticleId] = useState(0);
+var docId = articleId.articleNumber;
+  useEffect(() => {
+    const getArticleId = async () => {
+      const docRef = doc(db, "articleId", "articleId");
+      const docSnap = await getDoc(docRef);
+
+      const id = docSnap.exists() ? docSnap.data() : null;
+
+      if (id === null || id === undefined) return null;
+      setArticleId(id);
+    };
+
+    getArticleId();
+    
+  });
   
+ 
+
+  async function updateArticleId() {
+    try {
+      await setDoc(doc(db, "articleId", "articleId"), {
+        articleNumber:  docId+1,
+      });
+      console.log("article id updated to: " + (docId+1));
+      
+    } catch (e) {
+      console.error("Error updating id: ", e);
+    }
+  }
   async function addArticle() {
     try {
-      await setDoc(doc(db, "q_misconception",'post1'), {
-        id:inputs.id,
+      await setDoc(doc(db, "q_misconception", docId.toString()), {
+        id:  docId,
         heading: inputs.heading,
         author: inputs.author,
         date: inputs.date,
@@ -17,9 +46,9 @@ const AddArticle = () => {
         descC: inputs.descC,
         descP: inputs.descP,
         imgSrc: inputs.imgSrc,
-        link:inputs.link
+        link: "/articlePage/" + docId,
       });
-      console.log("Document written with ID: ");
+      console.log("Document written with ID: " + docId);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
@@ -33,22 +62,16 @@ const AddArticle = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addArticle()
-    
+
+    addArticle();
+    updateArticleId();
   };
   return (
     <>
       <AddArticleContainer>
+        {articleId.articleNumber}
+
         <form onSubmit={handleSubmit}>
-        <label>
-            Enter your id:
-            <input
-              type="number"
-              name="id"
-              value={inputs.id || ""}
-              onChange={handleChange}
-            />
-          </label>
           <label>
             Enter your heading:
             <input
@@ -112,15 +135,7 @@ const AddArticle = () => {
               onChange={handleChange}
             />
           </label>
-          <label>
-            Enter your link:
-            <input
-              type="text"
-              name="link"
-              value={inputs.link || ""}
-              onChange={handleChange}
-            />
-          </label>
+
           <input type="submit" />
         </form>
       </AddArticleContainer>

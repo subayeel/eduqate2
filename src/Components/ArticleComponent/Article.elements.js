@@ -35,6 +35,7 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   padding: 0 14px;
   margin-top: 85px;
+  margin-left: 28px;
   flex: 1;
   @media screen and (max-width: 768px) {
     display: none;
