@@ -15,7 +15,7 @@ import {
   Heading,
 } from "./ConceptCardLarge.elements";
 
-const ConceptCardLarge = ({ imgSrc, heading, author, date, desc }) => { 
+const ConceptCardLarge = ({ link,imgSrc, heading, author, date, desc }) => { 
   return (
     <>
       <ConceptCardContainer>
@@ -25,7 +25,7 @@ const ConceptCardLarge = ({ imgSrc, heading, author, date, desc }) => {
           </ImgWrap>
 
           <TextWrapper>
-            <Heading>{heading}</Heading>
+            <Heading to={link}>{heading}</Heading>
 
             <Author>{author}</Author>
             <Date>{date}</Date>

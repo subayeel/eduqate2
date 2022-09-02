@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ConceptCardContainer = styled.div`
   display: inline;
@@ -27,7 +28,7 @@ export const ConceptRow1 = styled.div`
 
   align-items: start;
   grid-template-areas: "col1 col2 col3 col4";
-`;
+`; 
 
 export const Column1 = styled.div`
   margin-bottom: 15px;
@@ -53,19 +54,19 @@ export const TopLine = styled.p`
   letter-spacing: 1.4px;
   text-transform: uppercase;
 `;
-export const Heading = styled.h1`
+
+
+export const Heading = styled(Link)`
   margin: 0;
-
-  font-size: 22px;
+  display: block;
+  font-size: 24px;
   line-height: 1.1;
-
   font-weight: 600;
+  text-decoration: none;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
-
   &:hover {
     color: #3c7c90;
   }
-
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }

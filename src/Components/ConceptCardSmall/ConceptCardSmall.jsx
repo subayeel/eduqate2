@@ -12,7 +12,7 @@ import {
   TextWrapper,
 } from "./ConceptCardSmall.elements";
 
-const ConceptCardSmall = ({ heading, author, imgSrc }) => {
+const ConceptCardSmall = ({ link, heading, author, imgSrc }) => {
   return (
     <>
       <ConceptCardContainer>
@@ -25,7 +25,7 @@ const ConceptCardSmall = ({ heading, author, imgSrc }) => {
             </Column1>
             <Column2>
               <TextWrapper>
-                <Heading>{heading}</Heading>
+                <Heading to={link}>{heading}</Heading>
                 <Author>{author}</Author>
               </TextWrapper>
             </Column2>

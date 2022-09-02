@@ -18,7 +18,7 @@ import { useParams } from "react-router-dom";
 const BrowseSection = () => {
   const [info, setInfo] = useState([]);
   const {id} = useParams();
-  const collectionRef = collection(db, "q_misconception");
+  const collectionRef = collection(db, id);
   useEffect(() => {
     const getData = async () => {
       const data = await getDocs(collectionRef);
@@ -38,7 +38,7 @@ const BrowseSection = () => {
               {info
                 .slice(0,1)
                 .map((filteredInf) => {
-                  return <ConceptCardLarge {...filteredInf} />;
+                  return <ConceptCardLarge  {...filteredInf} />;
                 })}
             </Column1>
             <Column2>
@@ -53,7 +53,7 @@ const BrowseSection = () => {
             <Column1>
               {/* add pagination to limit the rendering of children */}
               {info.map((inf) => {
-                return <ConceptCard {...inf} />;
+                return <ConceptCard  {...inf} />;
               })}
             </Column1>
           </MainSection>

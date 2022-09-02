@@ -7,7 +7,7 @@ export const prophetSection = {
   headline: "Misconception about the Prophet",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam eius est voluptas aspernatur modi, placeat deserunt eum harum vel?",
   buttonLabel:"Learn More",
-  btnLink:"/browsepage/",
+  btnLink:"/browsepage/p_misconception",
   imgStart:true,
   img:require('../Images/quran.svg').default,
   alt:'car',
@@ -25,7 +25,7 @@ export const quranSection = {
   headline: "Misconception about Quran",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam eius est voluptas aspernatur modi, placeat deserunt eum harum vel?",
   buttonLabel:"Learn More",
-  btnLink:"/browsepage/q",
+  btnLink:"/browsepage/q_misconception",
 
   imgStart:false,
   img:require('../Images/quran.svg').default,
@@ -44,7 +44,7 @@ export const currentAffairsSection = {
   headline: "Muslims in the Modern world",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam eius est voluptas aspernatur modi, placeat deserunt eum harum vel?",
   buttonLabel:"Learn More",
-  btnLink:"/browsepage/ca",
+  btnLink:"/browsepage/c_misconception",
 
   imgStart:false,
   img:require('../Images/quran.svg').default,

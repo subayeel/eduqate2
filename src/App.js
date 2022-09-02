@@ -4,12 +4,13 @@ import GlobalStyle from "./Components/Global";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import LoginPage from "./Pages/LoginPage";
-import ArticlePage from "./Pages/ArticlePage";
+
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 
 import BrowseSection from "./Components/BrowseSection/BrowseSection";
 import AddArticle from "./Components/AddArticle/AddArticle";
+import Article from "./Components/ArticleComponent/Article";
 
 function App() {
   const theme = {
@@ -34,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<LoginPage />} />
-          <Route path="/articlePage/:id" element={<ArticlePage />} />
+          <Route path="/browsepage/:category/articlePage/:id" element={<Article />} />
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/browsepage/:id" element={<BrowseSection />} />
         </Routes>

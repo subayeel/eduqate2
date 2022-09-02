@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
 
 export const ConceptCardContainer = styled.div`
   display: inline;
@@ -8,9 +9,9 @@ export const ConceptCardContainer = styled.div`
 export const ConceptCardWrapper = styled.div`
   position: relative;
   z-index: 1;
-  max-height: 800px;
-  max-width: 1100px;
-  margin-right: auto;
+  max-height: 800px;//
+  
+  margin-right: auto; 
   margin-left: auto;
 
   justify-content: center;
@@ -56,14 +57,19 @@ export const TopLine = styled.p`
   letter-spacing: 1.4px;
   text-transform: uppercase;
 `;
-export const Heading = styled.h1`
-  margin: 14px 0 0 0;
+export const Heading = styled(Link)`
+  margin: 0;
+  display: block;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1;
   font-weight: 600;
+  text-decoration: none;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
   &:hover {
     color: #3c7c90;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
   }
 `;
 
@@ -98,8 +104,8 @@ export const ImgWrap = styled.div`
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  height: 400px;
-  width: 600px;
+  height: 400px;//
+  width: 600px;//
 `;
 
 export const Img = styled.img`

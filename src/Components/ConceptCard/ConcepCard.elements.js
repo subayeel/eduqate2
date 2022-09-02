@@ -9,8 +9,8 @@ export const ConceptCardContainer = styled.div`
 export const ConceptCardWrapper = styled.div`
   display: grid;
   z-index: 1;
-  max-height: 350px;
-  margin-right: auto;
+  max-height: 350px;//
+  margin-right: auto; 
   margin-left: 0;
   overflow: hidden;
   margin-bottom: 14px;
@@ -100,8 +100,8 @@ export const ImgWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
-  width: 250px;
+  height: 150px;//
+  width: 250px; //
 `;
 
 export const Img = styled.img`

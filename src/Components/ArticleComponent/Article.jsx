@@ -39,12 +39,12 @@ const Article = () => {
   const [isChristian, setChristian] = useState(false);
   const [isAthiest, setAthiest] = useState(true);
 
-  const { id } = useParams();
+  const { category, id } = useParams();
   const [articleInfo, setArticleInfo] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const docRef = doc(db, "q_misconception", id);
+      const docRef = doc(db, category, id);
       const docSnap = await getDoc(docRef);
 
       const data = docSnap.exists() ? docSnap.data() : null;
@@ -56,7 +56,7 @@ const Article = () => {
   }, []);
 
   const [cardInfo, setCardInfo] = useState([]);
-  const collectionRef = collection(db, "q_misconception");
+  const collectionRef = collection(db, category);
   useEffect(() => {
     const getData = async () => {
       const data = await getDocs(collectionRef);
@@ -87,7 +87,6 @@ const Article = () => {
                 <ImgWrap>
                   <Img src={articleInfo.imgSrc} />
                 </ImgWrap>
-                {/* <ArticleContent>{articleInfo.desc}</ArticleContent> */}
               </TextWrapper>
               <TextBoxContainer>
                 <TextBoxWrapper>

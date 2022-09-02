@@ -6,7 +6,7 @@ import { db } from "../../firebase-config";
 const AddArticle = () => {
   const [inputs, setInputs] = useState({});
   const [articleId, setArticleId] = useState(0);
-var docId = articleId.articleNumber;
+  var docId = articleId.articleNumber;
   useEffect(() => {
     const getArticleId = async () => {
       const docRef = doc(db, "articleId", "articleId");
@@ -19,26 +19,22 @@ var docId = articleId.articleNumber;
     };
 
     getArticleId();
-    
   });
-  
- 
 
   async function updateArticleId() {
     try {
       await setDoc(doc(db, "articleId", "articleId"), {
-        articleNumber:  docId+1,
+        articleNumber: docId + 1,
       });
-      console.log("article id updated to: " + (docId+1));
-      
+      console.log("article id updated to: " + (docId + 1));
     } catch (e) {
       console.error("Error updating id: ", e);
     }
   }
   async function addArticle() {
     try {
-      await setDoc(doc(db, "q_misconception", docId.toString()), {
-        id:  docId,
+      await setDoc(doc(db, inputs.category, docId.toString()), {
+        id: docId,
         heading: inputs.heading,
         author: inputs.author,
         date: inputs.date,
@@ -65,13 +61,21 @@ var docId = articleId.articleNumber;
 
     addArticle();
     updateArticleId();
+    
   };
   return (
     <>
       <AddArticleContainer>
-        {articleId.articleNumber}
-
         <form onSubmit={handleSubmit}>
+          <select
+            name="category"
+            value={inputs.category}
+            onChange={handleChange}
+          >
+            <option>q_misconception</option>
+            <option>c_misconception</option>
+            <option>p_misconception</option>
+          </select>
           <label>
             Enter your heading:
             <input
