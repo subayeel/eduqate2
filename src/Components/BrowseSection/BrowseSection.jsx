@@ -13,9 +13,11 @@ import {
 } from "./BrowseSection.elements";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
 const BrowseSection = () => {
   const [info, setInfo] = useState([]);
+  const {id} = useParams();
   const collectionRef = collection(db, "q_misconception");
   useEffect(() => {
     const getData = async () => {
@@ -30,6 +32,7 @@ const BrowseSection = () => {
     <>
       <BrowseSectionContainer>
         <BrowseSectionWrapper>
+        
           <Row>
             <Column1>
               {info

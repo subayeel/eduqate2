@@ -35,20 +35,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<LoginPage />} />
           <Route path="/articlePage/:id" element={<ArticlePage />} />
-          <Route path="/addarticle" element={<AddArticle/>}/>        
-          <Route
-            path="/browsepage/currentaffairs"
-            element={<BrowseSection/>}
-          />
-            
-          <Route
-            path="/browsepage/quran"
-            element={<BrowseSection/>}
-          />
-          <Route
-            path="/browsepage/prophet"
-            element={<BrowseSection/>}
-          />
+          <Route path="/addarticle" element={<AddArticle />} />
+          <Route path="/browsepage/:id" element={<BrowseSection />} />
         </Routes>
       </Router>
     </ThemeProvider>

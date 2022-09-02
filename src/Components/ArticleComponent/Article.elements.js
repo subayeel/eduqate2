@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { FaCopy } from "react-icons/fa";
+import {
+  FaCopy,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export const ArticleContainer = styled.div`
   color: #fff;
@@ -55,7 +61,7 @@ export const Heading = styled.h1`
   letter-spacing: 2px;
   line-height: 1.1;
   font-weight: 500;
-  margin-bottom: 7px;
+
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};
 
   @media screen and (max-width: 480px) {
@@ -115,6 +121,96 @@ export const Img = styled.img`
   min-width: 100%;
   @media screen and (max-width: 768px) {
     max-height: 300px;
+  }
+`;
+
+export const SocialIconsContainer = styled.div`
+  width: 100%;
+  height: 36px;
+  margin: 14px 0;
+  display: flex;
+  justify-content: start;
+`;
+export const SocialIconWrapper = styled.div`
+  display: flex;
+`;
+
+export const WhatsappIcon = styled(FaWhatsapp)`
+  height: 24px;
+  width: 24px;
+  padding: 6px;
+  margin: 0 7px 0 0;
+
+  background-color: #25d366;
+
+  &:hover {
+    cursor: pointer;
+    
+    background-color: #7fc99b;
+  }
+`;
+export const TwitterIcon = styled(FaTwitter)`
+  height: 24px;
+  width: 24px;
+  padding: 6px;
+  background-color: #1da1f2;
+  margin: 0 7px 0 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #6db6e3;
+    
+  }
+`;
+export const InstagramIcon = styled(FaInstagram)`
+  height: 24px;
+  width: 24px;
+  padding: 6px;
+  margin: 0 7px 0 0;
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background-blend-mode: lighten;
+    
+  }
+`;
+export const FacebookIcon = styled(FaFacebook)`
+  height: 24px;
+  width: 24px;
+  padding: 6px;
+  margin: 0 7px 0 0;
+  color: white;
+  background-color: #4267b2;
+  &:hover {
+    cursor: pointer;
+    background-color: #536fb0;
+    
   }
 `;
 
@@ -224,6 +320,5 @@ export const ClipboardIcon = styled(FaCopy)`
 
     background-color: #3c7c90;
     color: white;
-    
   }
 `;

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebase-config";
 import { collection, getDocs, getDoc, doc } from "firebase/firestore";
 import {
-  ArticleContainer, 
+  ArticleContainer,
   ArticleWrapper,
   TextWrapper,
   Heading,
@@ -21,7 +21,15 @@ import {
   ToggleButtonsWrapper,
   Toggle1,
   Toggle2,
-  Toggle3,ClipBoardWrapper,ClipboardIcon
+  Toggle3,
+  ClipBoardWrapper,
+  ClipboardIcon,
+  SocialIconsContainer,
+  SocialIconWrapper,
+  InstagramIcon,
+  FacebookIcon,
+  WhatsappIcon,
+  TwitterIcon,
 } from "./Article.elements";
 
 import ConceptCardSmall from "../ConceptCardSmall/ConceptCardSmall";
@@ -31,12 +39,12 @@ const Article = () => {
   const [isChristian, setChristian] = useState(false);
   const [isAthiest, setAthiest] = useState(true);
 
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [articleInfo, setArticleInfo] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const docRef = doc(db, "q_misconception", id); 
+      const docRef = doc(db, "q_misconception", id);
       const docSnap = await getDoc(docRef);
 
       const data = docSnap.exists() ? docSnap.data() : null;
@@ -68,6 +76,14 @@ const Article = () => {
                 <Heading>{articleInfo.heading}</Heading>
                 <Author>{articleInfo.author}</Author>
                 <Date>{articleInfo.date}</Date>
+                <SocialIconsContainer>
+                  <SocialIconWrapper>
+                    <FacebookIcon />
+                    <InstagramIcon />
+                    <TwitterIcon />
+                    <WhatsappIcon />
+                  </SocialIconWrapper>
+                </SocialIconsContainer>
                 <ImgWrap>
                   <Img src={articleInfo.imgSrc} />
                 </ImgWrap>
@@ -76,10 +92,9 @@ const Article = () => {
               <TextBoxContainer>
                 <TextBoxWrapper>
                   <ToggleButtonsContainer>
-                  <ClipBoardWrapper>
-                    <ClipboardIcon></ClipboardIcon>
-                    
-                  </ClipBoardWrapper>
+                    <ClipBoardWrapper>
+                      <ClipboardIcon></ClipboardIcon>
+                    </ClipBoardWrapper>
                     <ToggleButtonsWrapper>
                       <Toggle1
                         isAthiest={isAthiest}
@@ -114,18 +129,21 @@ const Article = () => {
                     </ToggleButtonsWrapper>
                   </ToggleButtonsContainer>
                   <TextWrapper>
-                  
-                  <ArticleContent>{isAthiest ? articleInfo.descA : ''}</ArticleContent>
-                  <ArticleContent>{isChristian ? articleInfo.descC : ''}</ArticleContent>
-                  <ArticleContent>{isPagan ? articleInfo.descP : ''}</ArticleContent>
-                  
-                    
+                    <ArticleContent>
+                      {isAthiest ? articleInfo.descA : ""}
+                    </ArticleContent>
+                    <ArticleContent>
+                      {isChristian ? articleInfo.descC : ""}
+                    </ArticleContent>
+                    <ArticleContent>
+                      {isPagan ? articleInfo.descP : ""}
+                    </ArticleContent>
                   </TextWrapper>
                 </TextBoxWrapper>
               </TextBoxContainer>
             </Column1>
             <Column2>
-              {cardInfo.slice(0,4).map((inf) => {
+              {cardInfo.slice(0, 4).map((inf) => {
                 return <ConceptCardSmall {...inf} />;
               })}
             </Column2>
