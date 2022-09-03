@@ -37,7 +37,7 @@ function App() {
           <Route path="/signin" element={<LoginPage />} />
           <Route path="/browsepage/:category/articlePage/:id" element={<Article />} />
           <Route path="/addarticle" element={<AddArticle />} />
-          <Route path="/browsepage/:id" element={<BrowseSection />} />
+          <Route path="/browsepage/:category" element={<BrowseSection />} />
         </Routes>
       </Router>
     </ThemeProvider>

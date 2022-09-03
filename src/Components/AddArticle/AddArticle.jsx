@@ -7,9 +7,10 @@ const AddArticle = () => {
   const [inputs, setInputs] = useState({});
   const [articleId, setArticleId] = useState(0);
   var docId = articleId.articleNumber;
+  var ctg = inputs.category;
   useEffect(() => {
     const getArticleId = async () => {
-      const docRef = doc(db, "articleId", "articleId");
+      const docRef = doc(db, "articleId", ctg+"_article_id");
       const docSnap = await getDoc(docRef);
 
       const id = docSnap.exists() ? docSnap.data() : null;
@@ -23,7 +24,7 @@ const AddArticle = () => {
 
   async function updateArticleId() {
     try {
-      await setDoc(doc(db, "articleId", "articleId"), {
+      await setDoc(doc(db, "articleId", ctg+"_article_id"), {
         articleNumber: docId + 1,
       });
       console.log("article id updated to: " + (docId + 1));
@@ -42,7 +43,7 @@ const AddArticle = () => {
         descC: inputs.descC,
         descP: inputs.descP,
         imgSrc: inputs.imgSrc,
-        link: "/articlePage/" + docId,
+        link: "/browsepage/"+ctg+"/articlePage/" + docId,
       });
       console.log("Document written with ID: " + docId);
     } catch (e) {
@@ -69,7 +70,7 @@ const AddArticle = () => {
         <form onSubmit={handleSubmit}>
           <select
             name="category"
-            value={inputs.category}
+            value={inputs.category ? inputs.category : inputs.category='q_misconception'}
             onChange={handleChange}
           >
             <option>q_misconception</option>

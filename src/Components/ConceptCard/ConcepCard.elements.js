@@ -102,6 +102,7 @@ export const ImgWrap = styled.div`
   justify-content: center;
   height: 150px;//
   width: 250px; //
+  overflow: hidden;
 `;
 
 export const Img = styled.img`
