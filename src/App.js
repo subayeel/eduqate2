@@ -11,6 +11,7 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import BrowseSection from "./Components/BrowseSection/BrowseSection";
 import AddArticle from "./Components/AddArticle/AddArticle";
 import Article from "./Components/ArticleComponent/Article";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const theme = {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/browsepage/:category" element={<BrowseSection />} />
         </Routes>
+        <Footer/>
       </Router>
     </ThemeProvider>
   );

@@ -35,13 +35,13 @@ function Navbar({toggle}) {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks  to="/aritclepage">Topics</NavLinks>
+            <NavLinks  to="/browsepage/c_misconception">Current Affairs</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="">Content</NavLinks>
+            <NavLinks to="/browsepage/q_misconception">Quran</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="">Misconception</NavLinks>
+            <NavLinks to="/browsepage/p_misconception">Prophet</NavLinks>
           </NavItem>
         </NavMenu>
         <NavBtn>

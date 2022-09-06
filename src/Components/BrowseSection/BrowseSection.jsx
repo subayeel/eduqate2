@@ -5,15 +5,15 @@ import ConceptCard from "../ConceptCard/ConceptCard";
 import {
   BrowseSectionContainer,
   BrowseSectionWrapper,
-  HeroSection,
-  Row,
-  Column1,
-  Column2,
-  MainSection,
+ Heading,BrowseHero,BrowseHeroWrapper,
+  
+  
+  HorizontalScrollable,
 } from "./BrowseSection.elements";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import BrowseCard from "../BrowseCard/BrowseCard";
 
 const BrowseSection = () => {
   const [info, setInfo] = useState([]);
@@ -33,30 +33,33 @@ const BrowseSection = () => {
       <BrowseSectionContainer>
         <BrowseSectionWrapper>
         
-          <Row>
-            <Column1>
-              {info
+          
+              {/* {info
                 .slice(0,1)
                 .map((filteredInf) => {
                   return <ConceptCardLarge  {...filteredInf} />;
                 })}
-            </Column1>
-            <Column2>
+            
               
               {info.slice(0,4).map((inf) => {
                 return <ConceptCardSmall {...inf} />;
               })}
-            </Column2>
-          </Row>
+             */}
+             <BrowseHero>
+              <BrowseHeroWrapper>
+                <Heading> Misconception about ...</Heading> 
+              </BrowseHeroWrapper>
+             </BrowseHero>
+          
 
-          <MainSection>
-            <Column1>
-              {/* add pagination to limit the no. of children rendered */}
-              {info.map((inf) => {
-                return <ConceptCard  {...inf} />;
+         <Heading dark>View Recent Uploads</Heading>
+          <HorizontalScrollable>
+            {info.map((inf) => {
+                return <BrowseCard  {...inf} />;
               })}
-            </Column1>
-          </MainSection>
+          </HorizontalScrollable>
+          
+          
         </BrowseSectionWrapper>
       </BrowseSectionContainer>
     </>

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 export const ConceptCardContainer = styled.div`
   display: inline;
   color: #fff;
+  @media screen and (max-width:768px){
+    display: none;
+  }
 `;
 
 export const ConceptCardWrapper = styled.div`
@@ -20,6 +23,7 @@ export const ConceptCardWrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
+ 
 `;
 
 export const ConceptRow1 = styled.div`

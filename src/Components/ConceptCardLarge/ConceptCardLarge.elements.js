@@ -7,10 +7,10 @@ export const ConceptCardContainer = styled.div`
 `;
 
 export const ConceptCardWrapper = styled.div`
-  position: relative;
+  
   z-index: 1;
   max-height: 800px;//
-  
+  max-width: 1300px;
   margin-right: auto; 
   margin-left: auto;
 
@@ -19,29 +19,12 @@ export const ConceptCardWrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
+ 
 `;
 
-export const ConceptRow1 = styled.div`
-  display: grid;
-  grid-auto-columns: 1fr 1fr 1fr;
 
-  align-items: start;
-  grid-template-areas: "col1 col2 col3";
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  }
-`;
 
-export const Column1 = styled.div`
-  grid-area: 1/1/2/2;
-  justify-content: start;
-  align-items: flex-start;
-`;
-export const Column2 = styled.div`
-  padding: 0 15px;
-  grid-area: 1/2/2/4;
-`;
+
 
 export const TextWrapper = styled.div`
   max-width: 840px;
@@ -101,20 +84,22 @@ export const BtnWrap = styled.div`
 
 export const ImgWrap = styled.div`
   display: flex;
+  position: relative;
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  height: 400px;//
-  width: 600px;//
+  max-height: 300px;
+  max-width: 600px;
+  /* @media screen and (max-width: 768px) {
+    max-width: 300px;
+  } */
 `;
 
 export const Img = styled.img`
-  flex-shrink: 0;
+  
   object-fit: cover;
   min-height: 100%;
   min-width: 100%;
 
-  @media screen and (max-width: 768px) {
-    max-height: 300px;
-  }
+
 `;

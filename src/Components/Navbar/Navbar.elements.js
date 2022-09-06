@@ -80,6 +80,9 @@ export const NavMenu = styled.ul`
 `;
 export const NavItem = styled.li`
   height: 50px;
+  &:hover{
+    background-color: #eeeeee;
+  }
 `;
 
 export const NavLinks = styled(LinkR)`

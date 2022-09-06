@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img from '../../Images/star-bg.png';
 
 export const BrowseSectionContainer = styled.div`
 width: 100%;
@@ -6,42 +7,51 @@ width: 100%;
 
 `
 export const BrowseSectionWrapper = styled.div`
-padding: 60px 0 0 0;
-max-width: 1300px;
-justify-content: center;
+padding: 50px 0 0 0;
+
+display: block;
 margin-left: auto;
 margin-right: auto;
 
 `
-export const HeroSection = styled.div`
-height: 80vh;
+
+
+
+export const Heading = styled.h2`
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+    text-align: center;
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    
+color:${(props)=>(props.dark? '#1d1d1f':'white')} ;
+`
+
+
+export const BrowseHero = styled.div`
 width: 100%;
-color: #2c2c2c;
+height: 95vh;
+/* background-image: url(${img}); */
+background: #2c2c2c;
+
 `
-
-export const Row = styled.div`
-display: grid;
-
-@media screen and (max-width:768px){
-    grid-template-columns: repeat(1,1fr);
-}
-@media screen and (min-width:768px){
-    grid-template-columns: repeat(2,1fr);
-}
-`
-
-export const Column1 = styled.div` 
-padding: 0 14px;
+export const BrowseHeroWrapper = styled.div`
+padding: 0 24px;
+display: flex;
 
 `
 
-export const Column2 = styled.div`
-padding: 0 14px;
-@media screen and (max-width:768px){
-    display: none;
-}
-`
 
-export const MainSection = styled.div`
-padding-top: 40px;
-`
+
+
+export const HorizontalScrollable = styled.div`
+  overflow: auto;
+  white-space: nowrap;
+  margin: 0 0 0 24px;
+  width: ${(props) => props.width};
+  > div {
+    display: inline-block;
+    margin: 0;
+  }
+`;

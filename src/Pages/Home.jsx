@@ -20,7 +20,7 @@ const Home = () => {
       <InfoSection {...quranSection} />
       <InfoSection {...prophetSection} />
       <InfoSection {...currentAffairsSection} />
-      <Footer/>
+      
      </>
   );
 };
