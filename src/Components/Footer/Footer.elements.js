@@ -11,14 +11,20 @@ import { Link } from "react-router-dom";
 export const FooterContainer = styled.div`
   background-color: #007c90;
   color: white;
+  
+  
 `;
 export const FooterWrapper = styled.div`
-  padding: 10px;
+  
+  max-width: 1140px;
+  padding: 14px 0;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Row = styled.div`
   display: flex;
-  margin: 8px 0;
+  
   align-items: center;
   justify-content: ${({ justify }) => (justify ? justify : "")};
   @media screen and (max-width: 768px) {
@@ -113,6 +119,7 @@ export const FooterFacebookIcon = styled(FaFacebookSquare)`
 export const FooterLikeIcon = styled(FaThumbsUp)`
   height: 40px;
   width: 40px;
+  padding: 7px;
   color: ${(props) => (props.color ? props.color : "white")};
 
   &:hover {

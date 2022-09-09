@@ -15,7 +15,7 @@ export const HeroWrapper = styled.div`
   position: relative;
   height: 580px;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -105,7 +105,7 @@ export const BottomLine = styled.p`
 `;
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};

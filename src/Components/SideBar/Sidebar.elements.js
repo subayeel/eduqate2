@@ -10,7 +10,7 @@ export const SidebarContainer = styled.div`
   background-color: #3c7c90;
   height: 100%;
   width: 40%;
-  top: 0;
+  top: 50px;
   right: 0;
   z-index: 999;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0%")};

@@ -12,14 +12,14 @@ import {
   NavBtnLink,
 } from "./Navbar.elements";
 
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaRegWindowClose } from "react-icons/fa";
 
-function Navbar({toggle}) {
+function Navbar({toggle,isOpen}) {
   return (
     <Nav>
       <NavbarContainer>
       <MobileIcon onClick={toggle}>
-          <FaBars />
+          {isOpen ?<FaRegWindowClose/>:<FaBars/>}
         </MobileIcon>
         <NavLogo to="/"> 
           <img

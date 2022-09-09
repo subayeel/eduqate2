@@ -7,14 +7,14 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  
+  background-color: white;
   height: 50px;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(0, 0, 0, 0.01) ;
 
   @media screen and (max-width: 900px) {
     justify-content: space-between;
@@ -25,9 +25,10 @@ export const Nav = styled.nav`
 `;
 export const NavbarContainer = styled.div`
   display: flex;
+  flex: 1;
   height: 50px;
-  width: 100%;
-  background-color: white;
+  max-width: 1140px;
+  
   justify-content: space-between;
   padding: 0 24px;
   
@@ -35,8 +36,9 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)` 
+  flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   overflow: hidden;
   img {

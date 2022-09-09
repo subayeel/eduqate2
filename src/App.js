@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./Components/Global";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import Home from "./Pages/Home";
 import LoginPage from "./Pages/LoginPage";
 
@@ -32,15 +37,19 @@ function App() {
 
       <Router>
         <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} />
+        <Navbar isOpen={isOpen} toggle={toggle} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<LoginPage />} />
-          <Route path="/browsepage/:category/articlePage/:id" element={<Article />} />
+          <Route
+            path="/browsepage/:category/articlePage/:id"
+            element={<Article />}
+          />
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/browsepage/:category" element={<BrowseSection />} />
         </Routes>
-        <Footer/>
+        <Outlet />
+        <Footer />
       </Router>
     </ThemeProvider>
   );

@@ -19,6 +19,7 @@ export const LoginWrapper = styled.div`
   width: 300px;
   position: relative;
   box-shadow: 0px 0px 10px;
+  
   padding: 10px;
   background-color: white;
 
