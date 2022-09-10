@@ -33,7 +33,7 @@ const BrowseSection = () => {
     };
 
     getData();
-  }, []);
+  }, [category]);
 
   if (category === "q_misconception") {
     heroObject = browseQuran;

@@ -10,6 +10,7 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #eeeeee;
+  
 `;
 
 export const LoginWrapper = styled.div`
@@ -18,10 +19,14 @@ export const LoginWrapper = styled.div`
   height: 470px;
   width: 300px;
   position: relative;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   
   padding: 10px;
   background-color: white;
+  &:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 
   padding: 0 24px;
 `;
@@ -144,6 +149,7 @@ export const ForgotPassword = styled(Link)`
   font-size: 14px;
   text-decoration-line: none;
   color: #3c7c90;
+  padding: 0 7px;
   &:hover {
     color: #73b3c7;
   }
