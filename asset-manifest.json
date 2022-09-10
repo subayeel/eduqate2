@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/eduqate2/static/js/main.91835832.js",
+    "main.js": "/eduqate2/static/js/main.b7701895.js",
     "static/media/quran.svg": "/eduqate2/static/media/quran.ae50b82f0965b677fdfcbfba48e2c9a8.svg",
     "index.html": "/eduqate2/index.html",
-    "main.91835832.js.map": "/eduqate2/static/js/main.91835832.js.map"
+    "main.b7701895.js.map": "/eduqate2/static/js/main.b7701895.js.map"
   },
   "entrypoints": [
-    "static/js/main.91835832.js"
+    "static/js/main.b7701895.js"
   ]
 }
