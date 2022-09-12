@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export const BrowseCardContainer = styled.div`
 color: #2c2c2c;
 margin: 14px;
-padding: 7px;
+padding: 14px ;
 display: inline-block;
 `
 

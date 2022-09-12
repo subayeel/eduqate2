@@ -41,10 +41,7 @@ const InfoSection = ({
                 <BtnWrap>
                   <Button
                     to={btnLink}
-                    smooth="true"
-                    spy="true"
-                    duration={500}
-                    offset={-80}
+                
                     primary={primary ? 1 : 0}
                     dark={dark ? 1 : 0}
                   >
@@ -54,7 +51,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap>
+              <ImgWrap imgStart={imgStart}>
                 <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>

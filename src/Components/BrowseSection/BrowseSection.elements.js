@@ -47,22 +47,36 @@ height: auto;
 background-color: #1c1d1f;
 
 
+
+
+`
+export const BgOverlay = styled.div`
+background:linear-gradient(to right,rgba(0, 0, 0, 0  ),rgba(0, 0, 0, 0.85)) ; 
+  
+
+  @media screen and (max-width:786px){
+    background:linear-gradient(to bottom,rgba(0, 0, 0, 0  ),rgba(0, 0, 0, 0.85)) ; 
+  }
 `
 export const BrowseHeroWrapper = styled.div`
 height: 100%;
-width: 100%;
-
+max-width: 1140px;
+margin-left: auto;
+margin-right: auto;
 
 `
 
 
+export const HScrollContainer = styled.div`
+max-width: 1168px;
+margin-left: auto;
+margin-right:auto;
+`
 
-
-export const HorizontalScrollable = styled.div`
+export const HScrollWrapper = styled.div`
   overflow: auto;
   white-space: nowrap;
-  margin: 0 0 0 24px;
-  width: ${(props) => props.width};
+  
   > div {
     display: inline-block;
     margin: 0;
@@ -103,12 +117,7 @@ align-items: center;
 justify-content: center;
 overflow: hidden;
 padding-right: 14px;
-background:linear-gradient(to right,rgba(0, 0, 0, 0  ),rgba(0, 0, 0, 0.85)) ; 
-  
 
-@media screen and (max-width:786px){
-  background:linear-gradient(to bottom,rgba(0, 0, 0, 0  ),rgba(0, 0, 0, 0.85)) ; 
-}
 `
 export const Img = styled.img`
 width: 400px;
@@ -123,7 +132,7 @@ object-fit: cover;
 }
 `
 export const TextWrap = styled.div`
-padding: 14px;
+padding: 0px;
 `
 export const Desc = styled.p`
 font-size:16px;

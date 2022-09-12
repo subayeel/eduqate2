@@ -45,15 +45,8 @@ const Hero = () => {
                   tempora at. Voluptatibus, a.
                 </Subtitle>
               </TextWrapper>
-              <BtnWrap right="40px">
-                <Button
-                  to="home"
-                  smooth="true"
-                  spy="true"
-                  duration={500}
-                  offset={-80}
-                  primary="true"
-                >
+              <BtnWrap right="0">
+                <Button to="home" primary="true">
                   Learn Quran
                 </Button>
               </BtnWrap>
@@ -63,28 +56,11 @@ const Hero = () => {
                 <HeroMessage {...dailyMsg1} />
                 <HeroMessage {...dailyMsg2} />
               </TextWrapper>
-              <BtnWrap right="32px">
-                <Button
-                  to="home"
-                  smooth="true"
-                  spy="true"
-                  duration={500}
-                  offset={-80}
-                  margin='0 14px 0 0'
-                  primary="true"
-                >
+              <BtnWrap right="0">
+                <Button to="home" margin="0 14px 0 0" primary="true">
                   Learn Quran
                 </Button>
-                <Button
-                  to="home"
-                  smooth="true"
-                  spy="true"
-                  
-                  duration={500}
-                  offset={-80}
-                  
-                  primary="true"
-                >
+                <Button to="home" primary="true">
                   Learn Quran
                 </Button>
               </BtnWrap>

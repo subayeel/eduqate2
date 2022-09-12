@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const HeroContainer = styled.div`
   color: #fff;
   margin-top:50px;
-  
-
+  height: 95vh;
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 768px) {
    
   }
@@ -84,7 +85,7 @@ export const SearchBar = styled.input.attrs({
 
 export const TextWrapper = styled.div`
   
-  padding: 10px 40px;
+  padding: 10px 0 10px 40px;
 `;
 
 export const TopLine = styled.p`
@@ -97,15 +98,17 @@ export const TopLine = styled.p`
 `;
 export const BottomLine = styled.p`
   color: #41c500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
+  margin-top: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   text-align: end;
 `;
 export const Heading = styled.h1`
-  margin-bottom: 24px;
+  
   font-size: 24px;
+  margin-bottom: 12px;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "white" : "#1C1A1D")};

@@ -4,8 +4,8 @@ import {
   BrowseSectionContainer,
   BrowseSectionWrapper,
   Heading,
-  HorizontalScrollable,
-  TextWrap,
+  HScrollContainer,HScrollWrapper
+  
 } from "./BrowseSection.elements";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
@@ -18,7 +18,7 @@ import {
   browseHadeeth,
 } from "../../Data/browseSectionData";
 import BrowseHero from "./BrowseHero";
-
+import ConceptCard from '../ConceptCard/ConceptCard'
 const BrowseSection = () => {
   var heroObject = {};
   const [info, setInfo] = useState([]);
@@ -47,27 +47,28 @@ const BrowseSection = () => {
     <>
       <BrowseSectionContainer>
         <BrowseSectionWrapper>
-          {/* {info
-                .slice(0,1)
-                .map((filteredInf) => {
-                  return <ConceptCardLarge  {...filteredInf} />;
-                })}
+          
             
+            <BrowseHero {...heroObject} />
               
-              {info.slice(0,4).map((inf) => {
-                return <ConceptCardSmall {...inf} />;
-              })}
-             */}
+              {/* {info.slice(0,4).map((inf) => {
+                return <ConceptCard{...inf} />;
+              })} */}
+            
 
-          <BrowseHero {...heroObject} />
+          
           <Heading dark align="center">
             View Recent Uploads
           </Heading>
-          <HorizontalScrollable>
+          <HScrollContainer>
+
+          
+          <HScrollWrapper>
             {info.map((inf) => {
               return <BrowseCard {...inf} />;
             })}
-          </HorizontalScrollable>
+          </HScrollWrapper>
+          </HScrollContainer>
         </BrowseSectionWrapper>
       </BrowseSectionContainer>
     </>
